@@ -29,5 +29,19 @@ namespace shopManager
             top = prodNode;
             id++;
         }
+        public List<Product> GetAllProducts()
+        {
+            List<Product> products = new List<Product>();
+
+            Node current = top;
+            while (current != null)
+            {
+                products.Add(current.Data);
+                current = current.Next;
+            }
+
+            return products;
+        }
+
     }
 }
