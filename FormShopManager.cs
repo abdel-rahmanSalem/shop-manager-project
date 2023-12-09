@@ -35,7 +35,7 @@ namespace shopManager
 
             // Validate category
             string category = categoryComboBox.Text;
-            if (string.IsNullOrEmpty(category))
+            if (category != "Cameras" && category != "Phones" && category != "Accessories")
             {
                 MessageBox.Show("Please select a valid category.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -102,5 +102,6 @@ namespace shopManager
                 dataGridView.Rows.Add(product.Name, product.ID, product.Category, product.Quantity, product.TotalPrice(), "Edit", "Delete");
             }
         }
+
     }
 }

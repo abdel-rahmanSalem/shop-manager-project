@@ -59,10 +59,12 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewButtonColumn();
             Column7 = new DataGridViewButtonColumn();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // nameLabel
@@ -74,7 +76,7 @@
             nameLabel.Location = new Point(145, 30);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(90, 32);
-            nameLabel.TabIndex = 0;
+            nameLabel.TabIndex = 20;
             nameLabel.Text = "Name";
             nameLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
@@ -86,7 +88,7 @@
             costLabel.Location = new Point(145, 94);
             costLabel.Name = "costLabel";
             costLabel.Size = new Size(75, 32);
-            costLabel.TabIndex = 1;
+            costLabel.TabIndex = 23;
             costLabel.Text = "Cost";
             costLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
@@ -94,24 +96,25 @@
             // 
             nameTextBox.BackColor = Color.FromArgb(23, 37, 47);
             nameTextBox.BorderStyle = BorderStyle.None;
+            nameTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             nameTextBox.ForeColor = Color.WhiteSmoke;
             nameTextBox.Location = new Point(254, 30);
             nameTextBox.Margin = new Padding(3, 2, 3, 2);
-            nameTextBox.Multiline = true;
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(371, 30);
-            nameTextBox.TabIndex = 2;
+            nameTextBox.Size = new Size(371, 29);
+            nameTextBox.TabIndex = 0;
             // 
             // profitTextBox
             // 
             profitTextBox.BackColor = Color.FromArgb(23, 37, 47);
             profitTextBox.BorderStyle = BorderStyle.None;
+            profitTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            profitTextBox.ForeColor = Color.White;
             profitTextBox.Location = new Point(505, 94);
             profitTextBox.Margin = new Padding(3, 2, 3, 2);
-            profitTextBox.Multiline = true;
             profitTextBox.Name = "profitTextBox";
-            profitTextBox.Size = new Size(120, 30);
-            profitTextBox.TabIndex = 3;
+            profitTextBox.Size = new Size(120, 29);
+            profitTextBox.TabIndex = 4;
             // 
             // profitLabel
             // 
@@ -121,7 +124,7 @@
             profitLabel.Location = new Point(396, 94);
             profitLabel.Name = "profitLabel";
             profitLabel.Size = new Size(86, 32);
-            profitLabel.TabIndex = 4;
+            profitLabel.TabIndex = 25;
             profitLabel.Text = "Profit";
             // 
             // categoryLabel
@@ -133,32 +136,34 @@
             categoryLabel.Location = new Point(645, 30);
             categoryLabel.Name = "categoryLabel";
             categoryLabel.Size = new Size(133, 32);
-            categoryLabel.TabIndex = 5;
+            categoryLabel.TabIndex = 21;
             categoryLabel.Text = "Category";
             // 
             // coatTextBox
             // 
             coatTextBox.BackColor = Color.FromArgb(23, 37, 47);
             coatTextBox.BorderStyle = BorderStyle.None;
+            coatTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            coatTextBox.ForeColor = Color.White;
             coatTextBox.Location = new Point(254, 94);
             coatTextBox.Margin = new Padding(3, 2, 3, 2);
-            coatTextBox.Multiline = true;
             coatTextBox.Name = "coatTextBox";
-            coatTextBox.Size = new Size(120, 30);
-            coatTextBox.TabIndex = 6;
+            coatTextBox.Size = new Size(120, 29);
+            coatTextBox.TabIndex = 3;
             // 
             // categoryComboBox
             // 
             categoryComboBox.Anchor = AnchorStyles.Top;
             categoryComboBox.BackColor = Color.LightGray;
+            categoryComboBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             categoryComboBox.ForeColor = Color.Black;
             categoryComboBox.FormattingEnabled = true;
             categoryComboBox.Items.AddRange(new object[] { "Cameras", "Phones", "Accessories" });
             categoryComboBox.Location = new Point(784, 37);
             categoryComboBox.Margin = new Padding(3, 2, 3, 2);
             categoryComboBox.Name = "categoryComboBox";
-            categoryComboBox.Size = new Size(242, 23);
-            categoryComboBox.TabIndex = 7;
+            categoryComboBox.Size = new Size(242, 29);
+            categoryComboBox.TabIndex = 1;
             // 
             // quantityLabel
             // 
@@ -169,7 +174,7 @@
             quantityLabel.Location = new Point(1045, 37);
             quantityLabel.Name = "quantityLabel";
             quantityLabel.Size = new Size(125, 32);
-            quantityLabel.TabIndex = 8;
+            quantityLabel.TabIndex = 22;
             quantityLabel.Text = "Quantity";
             // 
             // addButton
@@ -179,14 +184,14 @@
             addButton.FlatStyle = FlatStyle.Popup;
             addButton.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             addButton.ForeColor = Color.White;
-            addButton.Location = new Point(1199, 94);
+            addButton.Location = new Point(1212, 94);
             addButton.Margin = new Padding(3, 2, 3, 2);
             addButton.Name = "addButton";
-            addButton.Size = new Size(82, 37);
-            addButton.TabIndex = 10;
+            addButton.Size = new Size(70, 37);
+            addButton.TabIndex = 5;
             addButton.Text = "Add";
             addButton.UseVisualStyleBackColor = false;
-            addButton.Click += new EventHandler(addButton_Click);
+            addButton.Click += addButton_Click;
             // 
             // searchLabelHeader
             // 
@@ -196,20 +201,20 @@
             searchLabelHeader.Location = new Point(145, 190);
             searchLabelHeader.Name = "searchLabelHeader";
             searchLabelHeader.Size = new Size(105, 32);
-            searchLabelHeader.TabIndex = 11;
+            searchLabelHeader.TabIndex = 24;
             searchLabelHeader.Text = "Search";
             // 
             // searchTextBox
             // 
             searchTextBox.BackColor = Color.LightGray;
             searchTextBox.BorderStyle = BorderStyle.None;
-            searchTextBox.ForeColor = Color.White;
-            searchTextBox.Location = new Point(254, 185);
+            searchTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            searchTextBox.ForeColor = Color.Black;
+            searchTextBox.Location = new Point(254, 191);
             searchTextBox.Margin = new Padding(3, 2, 3, 2);
-            searchTextBox.Multiline = true;
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(705, 37);
-            searchTextBox.TabIndex = 12;
+            searchTextBox.Size = new Size(705, 29);
+            searchTextBox.TabIndex = 7;
             // 
             // bynameButton
             // 
@@ -222,7 +227,7 @@
             bynameButton.Margin = new Padding(3, 2, 3, 2);
             bynameButton.Name = "bynameButton";
             bynameButton.Size = new Size(125, 37);
-            bynameButton.TabIndex = 13;
+            bynameButton.TabIndex = 8;
             bynameButton.Text = "By Name";
             bynameButton.UseVisualStyleBackColor = false;
             // 
@@ -237,7 +242,7 @@
             byidButton.Margin = new Padding(3, 2, 3, 2);
             byidButton.Name = "byidButton";
             byidButton.Size = new Size(125, 37);
-            byidButton.TabIndex = 14;
+            byidButton.TabIndex = 9;
             byidButton.Text = "By ID";
             byidButton.UseVisualStyleBackColor = false;
             // 
@@ -252,20 +257,21 @@
             // quantityNumericUpDown
             // 
             quantityNumericUpDown.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            quantityNumericUpDown.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             quantityNumericUpDown.Location = new Point(1212, 40);
             quantityNumericUpDown.Name = "quantityNumericUpDown";
-            quantityNumericUpDown.Size = new Size(69, 23);
-            quantityNumericUpDown.TabIndex = 24;
+            quantityNumericUpDown.Size = new Size(69, 29);
+            quantityNumericUpDown.TabIndex = 2;
             quantityNumericUpDown.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.LightGray;
             pictureBox1.Image = Properties.Resources.R;
-            pictureBox1.Location = new Point(924, 186);
+            pictureBox1.Location = new Point(931, 192);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(32, 35);
+            pictureBox1.Size = new Size(26, 27);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 33;
             pictureBox1.TabStop = false;
@@ -292,7 +298,7 @@
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
             dataGridView.GridColor = Color.FromArgb(23, 37, 47);
-            dataGridView.Location = new Point(73, 277);
+            dataGridView.Location = new Point(20, 30);
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
             dataGridView.ReadOnly = true;
@@ -300,12 +306,12 @@
             dataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView.RowTemplate.Height = 25;
             dataGridView.ShowEditingIcon = false;
-            dataGridView.Size = new Size(1297, 372);
-            dataGridView.TabIndex = 0;
+            dataGridView.Size = new Size(1297, 313);
+            dataGridView.TabIndex = 6;
             // 
             // Column1
             // 
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 22F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             Column1.DefaultCellStyle = dataGridViewCellStyle1;
             Column1.HeaderText = "Name";
             Column1.Name = "Column1";
@@ -371,13 +377,24 @@
             Column7.Text = "Delete";
             Column7.UseColumnTextForButtonValue = true;
             // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoScroll = true;
+            panel1.BackColor = Color.FromArgb(23, 37, 47);
+            panel1.Controls.Add(dataGridView);
+            panel1.Location = new Point(48, 260);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1339, 376);
+            panel1.TabIndex = 36;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(12, 24, 33);
             ClientSize = new Size(1444, 661);
-            Controls.Add(dataGridView);
+            Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Controls.Add(quantityNumericUpDown);
             Controls.Add(byidButton);
@@ -403,6 +420,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -435,5 +453,6 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewButtonColumn Column6;
         private DataGridViewButtonColumn Column7;
+        private Panel panel1;
     }
 }
