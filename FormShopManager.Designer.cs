@@ -186,7 +186,7 @@
             addButton.TabIndex = 10;
             addButton.Text = "Add";
             addButton.UseVisualStyleBackColor = false;
-            //addButton.Click += new EventHandler(addButton_Click);
+            addButton.Click += new EventHandler(addButton_Click);
             // 
             // searchLabelHeader
             // 
