@@ -10,8 +10,7 @@ namespace shopManager
     {
         private string name;
         private string category;
-        private int quantity;
-        private int iD;
+        public int Quantity, ID;
         private double[] price = new double[2];
         private double totalPrice;
 
@@ -19,8 +18,8 @@ namespace shopManager
         {
             Name = name;
             Category = category;
-            this.quantity = quantity;
-            this.iD = iD;
+            Quantity = quantity;
+            ID = iD;
             Cost = cost;
             Profit = profit;
         }

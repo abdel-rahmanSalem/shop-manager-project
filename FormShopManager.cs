@@ -17,7 +17,11 @@ namespace shopManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Set focus to the nameTextBox
             nameTextBox.Focus();
+
+            // Load existing products into dataGridView
+            LoadProductsToDataGridView();
         }
         private void addButton_Click(object sender, EventArgs e)
         {
@@ -70,6 +74,9 @@ namespace shopManager
 
             // set focus to the first input field if needed
             nameTextBox.Focus();
+
+            // Reload products into dataGridView
+            LoadProductsToDataGridView();
         }
 
         private void ClearForm()
@@ -79,6 +86,21 @@ namespace shopManager
             quantityNumericUpDown.Value = 0;
             coatTextBox.Text = "";
             profitTextBox.Text = "";
+        }
+
+        private void LoadProductsToDataGridView()
+        {
+            // Clear existing data
+            dataGridView.Rows.Clear();
+
+            // Get all products from the stack
+            List<Product> products = dataList.GetAllProducts();
+
+            // Populate dataGridView with product data
+            foreach (Product product in products)
+            {
+                dataGridView.Rows.Add(product.Name, product.ID, product.Category, product.Quantity, product.TotalPrice(), "Edit", "Delete");
+            }
         }
     }
 }
