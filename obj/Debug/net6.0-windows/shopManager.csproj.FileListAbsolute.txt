@@ -16,3 +16,20 @@ C:\Users\Original Nassar\OneDrive\Desktop\shopproject\shop-manager-project\obj\D
 C:\Users\Original Nassar\OneDrive\Desktop\shopproject\shop-manager-project\obj\Debug\net6.0-windows\shopManager.genruntimeconfig.cache
 C:\Users\Original Nassar\OneDrive\Desktop\shopproject\shop-manager-project\obj\Debug\net6.0-windows\ref\shopManager.dll
 C:\Users\Original Nassar\OneDrive\Desktop\shopproject\shop-manager-project\obj\Debug\net6.0-windows\shopManager.Properties.Resources.resources
+C:\Users\modys\Desktop\shopManager\bin\Debug\net6.0-windows\shopManager.exe
+C:\Users\modys\Desktop\shopManager\bin\Debug\net6.0-windows\shopManager.deps.json
+C:\Users\modys\Desktop\shopManager\bin\Debug\net6.0-windows\shopManager.runtimeconfig.json
+C:\Users\modys\Desktop\shopManager\bin\Debug\net6.0-windows\shopManager.dll
+C:\Users\modys\Desktop\shopManager\bin\Debug\net6.0-windows\shopManager.pdb
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.Form1.resources
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.Properties.Resources.resources
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.csproj.GenerateResource.cache
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.AssemblyInfoInputs.cache
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.AssemblyInfo.cs
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.csproj.CoreCompileInputs.cache
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.dll
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\refint\shopManager.dll
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.pdb
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.genruntimeconfig.cache
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\ref\shopManager.dll
