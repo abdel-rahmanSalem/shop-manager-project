@@ -13,6 +13,7 @@ namespace shopManager
         {
             InitializeComponent();
             dataList = new StackDataList();
+            dataGridView.CellContentClick += dataGridView_CellContentClick;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -22,6 +23,7 @@ namespace shopManager
 
             // Load existing products into dataGridView
             LoadProductsToDataGridView();
+
         }
         private void addButton_Click(object sender, EventArgs e)
         {
@@ -103,5 +105,33 @@ namespace shopManager
             }
         }
 
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs dataGrid)
+        {
+            if (dataGrid.RowIndex >= 0)
+            {
+                int columnIndex = dataGrid.ColumnIndex;
+                int rowIndex = dataGrid.RowIndex;
+
+                // Check if the "Edit" button is clicked
+                if (columnIndex == dataGridView.Columns["Column6"].Index)
+                {
+                    // Handle edit logic, for example, show a form for editing
+                    // You can use the rowIndex to get the corresponding Product from the stack
+                    // Update the product in the stack and reload data into the dataGridView
+                    // Example:
+                    // Product selectedProduct = dataList.GetProductAtIndex(rowIndex);
+                    // ShowEditForm(selectedProduct);
+                }
+                // Check if the "Delete" button is clicked
+                else if (columnIndex == dataGridView.Columns["Column7"].Index)
+                {
+                    string prodId = dataGridView.Rows[rowIndex].Cells[1].Value.ToString();
+                    dataList.RemovedSpesProduct(int.Parse(prodId));
+                    LoadProductsToDataGridView();
+                }
+            }
+        }
+
     }
+
 }
