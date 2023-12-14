@@ -20,8 +20,10 @@ namespace shopManager
         private void loginButton_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
-            form1.Show();
-            Visible = false;
+            this.Hide();
+            form1.ShowDialog();
+            this.Close();
+            //Visible = false;
         }
     }
 }

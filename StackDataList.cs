@@ -11,7 +11,7 @@ namespace shopManager
         public Node Next;
         public Product Data;
     }
-    internal class StackDataList
+    public class StackDataList
     {
         private Node Top;
         private int id = 1111110;
