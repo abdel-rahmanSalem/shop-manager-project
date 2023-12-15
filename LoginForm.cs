@@ -23,9 +23,9 @@ namespace shopManager
                 MessageBox.Show("Wrong Username Or Password.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                InventoryForm inventory = InventoryForm.Instance;
+                HomepageForm home= HomepageForm.Instance;
                 this.Hide();
-                inventory.ShowDialog();
+                home.ShowDialog();
                 this.Close();
             }
         }
