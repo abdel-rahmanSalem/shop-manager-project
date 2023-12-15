@@ -11,7 +11,7 @@ namespace shopManager
         public Node Next;
         public Product Data;
     }
-    internal class StackDataList
+    public class StackDataList
     {
         private Node Top;
         private int id = 1111110;
@@ -46,11 +46,13 @@ namespace shopManager
 
         public Product GetSpecificProductById(int id)
         {
+            if (Top == null) return null;
             Node p = Top;
             if (p.Data.ID == id) return Top.Data;
             while (p.Next.Data.ID != id)
                 p = p.Next;
-            return p.Next.Data;
+            if (p == null) return null;
+            else return p.Next.Data;
         }
 
         public void RemovedSpesProduct(int id)

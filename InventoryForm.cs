@@ -8,89 +8,41 @@ namespace shopManager
 {
     public partial class InventoryForm : Form
     {
-        StackDataList dataList;
-        public InventoryForm()
+        private static InventoryForm instance;
+
+        public static InventoryForm Instance
+        {
+            get
+            {
+                if (instance == null || instance.IsDisposed)
+                {
+                    instance = new InventoryForm();
+                }
+                return instance;
+            }
+        }
+
+        public static StackDataList dataList;
+        private InventoryForm()
         {
             InitializeComponent();
             dataList = new StackDataList();
-            dataGridView.CellContentClick += dataGridView_CellContentClick;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Set focus to the nameTextBox
-            //nameTextBox.Focus();
+            dataGridView.CellContentClick += dataGridView_CellContentClick;
 
             // Load existing products into dataGridView
             LoadProductsToDataGridView();
 
         }
-        private void addButton_Click(object sender, EventArgs e)
+        private void addProdButton_Click(object sender, EventArgs e)
         {
-            //// Validate name
-            //string name = nameTextBox.Text.Trim();
-            //if (string.IsNullOrEmpty(name))
-            //{
-            //    MessageBox.Show("Please enter a valid name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //// Validate category
-            //string category = categoryComboBox.Text;
-            //if (category != "Cameras" && category != "Phones" && category != "Accessories")
-            //{
-            //    MessageBox.Show("Please select a valid category.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //// Validate quantity
-            //int quantity;
-            //if (!int.TryParse(quantityNumericUpDown.Text, out quantity) || quantity <= 0)
-            //{
-            //    MessageBox.Show("Please enter a valid quantity more than zero.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //// Validate cost
-            //double cost;
-            //if (!double.TryParse(costTextBox.Text, out cost) || cost <= 0)
-            //{
-            //    MessageBox.Show("Please enter a valid cost more than zero.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //// Validate profit
-            //double profit;
-            //if (!double.TryParse(profitTextBox.Text, out profit) || profit < 0)
-            //{
-            //    MessageBox.Show("Please enter a valid profit.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //// All validations passed,
-            //// add the product to the stack
-            //dataList.PushNewProduct(name, category, quantity, cost, profit);
-
-            //// Clear the form
-            //ClearForm();
-
-            //// set focus to the first input field if needed
-            //nameTextBox.Focus();
-
-            // Reload products into dataGridView
-            LoadProductsToDataGridView();
+            AddProductForm addProduct = new AddProductForm();
+            addProduct.ShowDialog();
         }
-
-        private void ClearForm()
-        {
-            //nameTextBox.Text = "";
-            //categoryComboBox.SelectedIndex = -1; // Reset category selection
-            //quantityNumericUpDown.Value = 0;
-            //costTextBox.Text = "";
-            //profitTextBox.Text = "";
-        }
-
-        private void LoadProductsToDataGridView()
+        public void LoadProductsToDataGridView()
         {
             // Clear existing data
             dataGridView.Rows.Clear();
@@ -132,8 +84,6 @@ namespace shopManager
             }
         }
 
-        private const int MinProductId = 1111110;
-
         private void UpdateDataGridViewWithProduct(Product product)
         {
             // Clear existing data
@@ -142,14 +92,13 @@ namespace shopManager
             // Update UI with the retrieved product information
             dataGridView.Rows.Add(product.Name, product.ID, product.Category, product.Quantity, product.TotalPrice(), "Edit", "Delete");
         }
-
-        private void search_ById(object sender, EventArgs e)
+        private void searchIcon_Click(object sender, EventArgs e)
         {
             string proID = searchTextBox.Text;
 
             if (int.TryParse(proID, out int id))
             {
-                if (id >= MinProductId)
+                if (id >= 1111110)
                 {
                     Product wantedProd = dataList.GetSpecificProductById(id);
 
@@ -173,10 +122,9 @@ namespace shopManager
             }
         }
 
-        private void addProdButton_Click(object sender, EventArgs e)
+        private void cancelSearchButton_Click(object sender, EventArgs e)
         {
-            AddProductForm addProduct = new AddProductForm();
-            addProduct.ShowDialog();
+            LoadProductsToDataGridView();
         }
     }
 

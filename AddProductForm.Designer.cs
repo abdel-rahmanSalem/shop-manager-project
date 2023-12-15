@@ -40,7 +40,7 @@
             quantityLabel = new Label();
             addButton = new Button();
             addProdLapel = new Label();
-            button1 = new Button();
+            cancelButton = new Button();
             ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             quantityNumericUpDown.BackColor = Color.LightGray;
             quantityNumericUpDown.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             quantityNumericUpDown.ForeColor = Color.Black;
-            quantityNumericUpDown.Location = new Point(269, 392);
+            quantityNumericUpDown.Location = new Point(269, 366);
             quantityNumericUpDown.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             quantityNumericUpDown.Name = "quantityNumericUpDown";
             quantityNumericUpDown.Size = new Size(250, 29);
@@ -63,9 +63,9 @@
             nameLabel.BackColor = Color.Transparent;
             nameLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
             nameLabel.ForeColor = Color.WhiteSmoke;
-            nameLabel.Location = new Point(55, 258);
+            nameLabel.Location = new Point(55, 232);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(90, 28);
+            nameLabel.Size = new Size(75, 30);
             nameLabel.TabIndex = 20;
             nameLabel.Text = "Name";
             nameLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -76,9 +76,9 @@
             costLabel.BackColor = Color.Transparent;
             costLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
             costLabel.ForeColor = Color.WhiteSmoke;
-            costLabel.Location = new Point(55, 315);
+            costLabel.Location = new Point(55, 289);
             costLabel.Name = "costLabel";
-            costLabel.Size = new Size(75, 28);
+            costLabel.Size = new Size(75, 30);
             costLabel.TabIndex = 23;
             costLabel.Text = "Cost";
             costLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -90,7 +90,7 @@
             nameTextBox.BorderStyle = BorderStyle.None;
             nameTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             nameTextBox.ForeColor = Color.White;
-            nameTextBox.Location = new Point(148, 258);
+            nameTextBox.Location = new Point(148, 232);
             nameTextBox.Margin = new Padding(3, 2, 3, 2);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(371, 29);
@@ -103,7 +103,7 @@
             profitTextBox.BorderStyle = BorderStyle.None;
             profitTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             profitTextBox.ForeColor = Color.White;
-            profitTextBox.Location = new Point(399, 314);
+            profitTextBox.Location = new Point(399, 288);
             profitTextBox.Margin = new Padding(3, 2, 3, 2);
             profitTextBox.Name = "profitTextBox";
             profitTextBox.Size = new Size(120, 29);
@@ -115,9 +115,9 @@
             profitLabel.BackColor = Color.Transparent;
             profitLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
             profitLabel.ForeColor = Color.WhiteSmoke;
-            profitLabel.Location = new Point(304, 314);
+            profitLabel.Location = new Point(304, 289);
             profitLabel.Name = "profitLabel";
-            profitLabel.Size = new Size(86, 28);
+            profitLabel.Size = new Size(69, 30);
             profitLabel.TabIndex = 25;
             profitLabel.Text = "Profit";
             // 
@@ -128,7 +128,7 @@
             categoryLabel.BackColor = Color.Transparent;
             categoryLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
             categoryLabel.ForeColor = Color.WhiteSmoke;
-            categoryLabel.Location = new Point(55, 439);
+            categoryLabel.Location = new Point(55, 413);
             categoryLabel.Name = "categoryLabel";
             categoryLabel.Size = new Size(109, 27);
             categoryLabel.TabIndex = 21;
@@ -140,7 +140,7 @@
             costTextBox.BorderStyle = BorderStyle.None;
             costTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             costTextBox.ForeColor = Color.White;
-            costTextBox.Location = new Point(150, 315);
+            costTextBox.Location = new Point(150, 289);
             costTextBox.Margin = new Padding(3, 2, 3, 2);
             costTextBox.Name = "costTextBox";
             costTextBox.Size = new Size(120, 29);
@@ -154,7 +154,7 @@
             categoryComboBox.ForeColor = Color.Black;
             categoryComboBox.FormattingEnabled = true;
             categoryComboBox.Items.AddRange(new object[] { "Cameras", "Phones", "Accessories" });
-            categoryComboBox.Location = new Point(269, 439);
+            categoryComboBox.Location = new Point(269, 413);
             categoryComboBox.Margin = new Padding(3, 2, 3, 2);
             categoryComboBox.Name = "categoryComboBox";
             categoryComboBox.Size = new Size(250, 31);
@@ -166,9 +166,9 @@
             quantityLabel.BackColor = Color.Transparent;
             quantityLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
             quantityLabel.ForeColor = Color.WhiteSmoke;
-            quantityLabel.Location = new Point(55, 392);
+            quantityLabel.Location = new Point(55, 366);
             quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new Size(109, 28);
+            quantityLabel.Size = new Size(109, 30);
             quantityLabel.TabIndex = 22;
             quantityLabel.Text = "Quantity";
             // 
@@ -180,13 +180,14 @@
             addButton.FlatStyle = FlatStyle.Popup;
             addButton.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             addButton.ForeColor = Color.White;
-            addButton.Location = new Point(55, 569);
+            addButton.Location = new Point(55, 522);
             addButton.Margin = new Padding(3, 2, 3, 2);
             addButton.Name = "addButton";
             addButton.Size = new Size(215, 37);
             addButton.TabIndex = 5;
             addButton.Text = "Add";
             addButton.UseVisualStyleBackColor = false;
+            addButton.Click += addButton_Click;
             // 
             // addProdLapel
             // 
@@ -196,35 +197,35 @@
             addProdLapel.ForeColor = Color.White;
             addProdLapel.Location = new Point(111, 81);
             addProdLapel.Name = "addProdLapel";
-            addProdLapel.Size = new Size(342, 28);
+            addProdLapel.Size = new Size(342, 54);
             addProdLapel.TabIndex = 26;
             addProdLapel.Text = "ADD NEW PRODUCT!";
             addProdLapel.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // cancelButton
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.BackColor = Color.Transparent;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(304, 569);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(215, 37);
-            button1.TabIndex = 6;
-            button1.Text = "Cancel";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            cancelButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cancelButton.BackColor = Color.Transparent;
+            cancelButton.Cursor = Cursors.Hand;
+            cancelButton.FlatStyle = FlatStyle.Popup;
+            cancelButton.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            cancelButton.ForeColor = Color.White;
+            cancelButton.Location = new Point(304, 522);
+            cancelButton.Margin = new Padding(3, 2, 3, 2);
+            cancelButton.Name = "cancelButton";
+            cancelButton.Size = new Size(215, 37);
+            cancelButton.TabIndex = 6;
+            cancelButton.Text = "Cancel";
+            cancelButton.UseVisualStyleBackColor = false;
+            cancelButton.Click += cancelButton_Click;
             // 
             // AddProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(19, 22, 32);
-            ClientSize = new Size(580, 677);
-            Controls.Add(button1);
+            ClientSize = new Size(580, 623);
+            Controls.Add(cancelButton);
             Controls.Add(addProdLapel);
             Controls.Add(quantityLabel);
             Controls.Add(categoryComboBox);
@@ -263,6 +264,6 @@
         private NumericUpDown quantityNumericUpDown;
         private Button addButton;
         private Label addProdLapel;
-        private Button button1;
+        private Button cancelButton;
     }
 }
