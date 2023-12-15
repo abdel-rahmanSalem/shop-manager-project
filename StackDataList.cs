@@ -46,14 +46,11 @@ namespace shopManager
 
         public Product GetSpecificProductById(int id)
         {
-            Node current = Top;
-            while (current != null)
-            {
-                if (current.Data.ID == id)
-                    return current.Data;
-                current = current.Next;
-            }
-            return null;
+            Node p = Top;
+            if (p.Data.ID == id) return Top.Data;
+            while (p.Next.Data.ID != id)
+                p = p.Next;
+            return p.Next.Data;
         }
 
         public void RemovedSpesProduct(int id)

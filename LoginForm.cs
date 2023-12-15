@@ -19,9 +19,15 @@ namespace shopManager
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            Visible = false;
+            if (usernameTextBox.Text != "admin" || passwordTextBox.Text != "1324")
+                MessageBox.Show("Wrong Username Or Password.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                InventoryForm inventory = new InventoryForm();
+                this.Hide();
+                inventory.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

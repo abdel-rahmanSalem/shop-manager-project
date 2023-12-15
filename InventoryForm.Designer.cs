@@ -1,6 +1,6 @@
 ﻿namespace shopManager
 {
-    partial class Form1
+    partial class InventoryForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,26 +29,15 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryForm));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            nameLabel = new Label();
-            costLabel = new Label();
-            nameTextBox = new TextBox();
-            profitTextBox = new TextBox();
-            profitLabel = new Label();
-            categoryLabel = new Label();
-            coatTextBox = new TextBox();
-            categoryComboBox = new ComboBox();
-            quantityLabel = new Label();
-            addButton = new Button();
             searchLabelHeader = new Label();
             searchTextBox = new TextBox();
-            bynameButton = new Button();
+            addProdButton = new Button();
             byidButton = new Button();
             imageList1 = new ImageList(components);
-            quantityNumericUpDown = new NumericUpDown();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             dataGridView = new DataGridView();
@@ -60,138 +49,11 @@
             Column6 = new DataGridViewButtonColumn();
             Column7 = new DataGridViewButtonColumn();
             panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.BackColor = Color.Transparent;
-            nameLabel.Font = new Font("Arial", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
-            nameLabel.ForeColor = Color.LightGray;
-            nameLabel.Location = new Point(145, 30);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(90, 32);
-            nameLabel.TabIndex = 20;
-            nameLabel.Text = "Name";
-            nameLabel.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // costLabel
-            // 
-            costLabel.AutoSize = true;
-            costLabel.Font = new Font("Arial", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
-            costLabel.ForeColor = Color.LightGray;
-            costLabel.Location = new Point(145, 94);
-            costLabel.Name = "costLabel";
-            costLabel.Size = new Size(75, 32);
-            costLabel.TabIndex = 23;
-            costLabel.Text = "Cost";
-            costLabel.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // nameTextBox
-            // 
-            nameTextBox.BackColor = Color.FromArgb(23, 37, 47);
-            nameTextBox.BorderStyle = BorderStyle.None;
-            nameTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            nameTextBox.ForeColor = Color.WhiteSmoke;
-            nameTextBox.Location = new Point(254, 30);
-            nameTextBox.Margin = new Padding(3, 2, 3, 2);
-            nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(371, 29);
-            nameTextBox.TabIndex = 0;
-            // 
-            // profitTextBox
-            // 
-            profitTextBox.BackColor = Color.FromArgb(23, 37, 47);
-            profitTextBox.BorderStyle = BorderStyle.None;
-            profitTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            profitTextBox.ForeColor = Color.White;
-            profitTextBox.Location = new Point(505, 94);
-            profitTextBox.Margin = new Padding(3, 2, 3, 2);
-            profitTextBox.Name = "profitTextBox";
-            profitTextBox.Size = new Size(120, 29);
-            profitTextBox.TabIndex = 4;
-            // 
-            // profitLabel
-            // 
-            profitLabel.AutoSize = true;
-            profitLabel.Font = new Font("Arial", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
-            profitLabel.ForeColor = Color.LightGray;
-            profitLabel.Location = new Point(396, 94);
-            profitLabel.Name = "profitLabel";
-            profitLabel.Size = new Size(86, 32);
-            profitLabel.TabIndex = 25;
-            profitLabel.Text = "Profit";
-            // 
-            // categoryLabel
-            // 
-            categoryLabel.Anchor = AnchorStyles.Top;
-            categoryLabel.AutoSize = true;
-            categoryLabel.Font = new Font("Arial", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
-            categoryLabel.ForeColor = Color.LightGray;
-            categoryLabel.Location = new Point(645, 30);
-            categoryLabel.Name = "categoryLabel";
-            categoryLabel.Size = new Size(133, 32);
-            categoryLabel.TabIndex = 21;
-            categoryLabel.Text = "Category";
-            // 
-            // coatTextBox
-            // 
-            coatTextBox.BackColor = Color.FromArgb(23, 37, 47);
-            coatTextBox.BorderStyle = BorderStyle.None;
-            coatTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            coatTextBox.ForeColor = Color.White;
-            coatTextBox.Location = new Point(254, 94);
-            coatTextBox.Margin = new Padding(3, 2, 3, 2);
-            coatTextBox.Name = "coatTextBox";
-            coatTextBox.Size = new Size(120, 29);
-            coatTextBox.TabIndex = 3;
-            // 
-            // categoryComboBox
-            // 
-            categoryComboBox.Anchor = AnchorStyles.Top;
-            categoryComboBox.BackColor = Color.LightGray;
-            categoryComboBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            categoryComboBox.ForeColor = Color.Black;
-            categoryComboBox.FormattingEnabled = true;
-            categoryComboBox.Items.AddRange(new object[] { "Cameras", "Phones", "Accessories" });
-            categoryComboBox.Location = new Point(784, 37);
-            categoryComboBox.Margin = new Padding(3, 2, 3, 2);
-            categoryComboBox.Name = "categoryComboBox";
-            categoryComboBox.Size = new Size(242, 29);
-            categoryComboBox.TabIndex = 1;
-            // 
-            // quantityLabel
-            // 
-            quantityLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            quantityLabel.AutoSize = true;
-            quantityLabel.Font = new Font("Arial", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
-            quantityLabel.ForeColor = Color.LightGray;
-            quantityLabel.Location = new Point(1045, 37);
-            quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new Size(125, 32);
-            quantityLabel.TabIndex = 22;
-            quantityLabel.Text = "Quantity";
-            // 
-            // addButton
-            // 
-            addButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            addButton.BackColor = Color.FromArgb(114, 0, 0);
-            addButton.FlatStyle = FlatStyle.Popup;
-            addButton.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            addButton.ForeColor = Color.White;
-            addButton.Location = new Point(1212, 94);
-            addButton.Margin = new Padding(3, 2, 3, 2);
-            addButton.Name = "addButton";
-            addButton.Size = new Size(70, 37);
-            addButton.TabIndex = 5;
-            addButton.Text = "Add";
-            addButton.UseVisualStyleBackColor = false;
-            addButton.Click += addButton_Click;
             // 
             // searchLabelHeader
             // 
@@ -216,20 +78,21 @@
             searchTextBox.Size = new Size(705, 29);
             searchTextBox.TabIndex = 7;
             // 
-            // bynameButton
+            // addProdButton
             // 
-            bynameButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            bynameButton.BackColor = Color.FromArgb(42, 61, 85);
-            bynameButton.FlatStyle = FlatStyle.Popup;
-            bynameButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            bynameButton.ForeColor = Color.White;
-            bynameButton.Location = new Point(1001, 185);
-            bynameButton.Margin = new Padding(3, 2, 3, 2);
-            bynameButton.Name = "bynameButton";
-            bynameButton.Size = new Size(125, 37);
-            bynameButton.TabIndex = 8;
-            bynameButton.Text = "By Name";
-            bynameButton.UseVisualStyleBackColor = false;
+            addProdButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            addProdButton.BackColor = Color.Maroon;
+            addProdButton.FlatStyle = FlatStyle.Popup;
+            addProdButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            addProdButton.ForeColor = Color.White;
+            addProdButton.Location = new Point(931, 49);
+            addProdButton.Margin = new Padding(3, 2, 3, 2);
+            addProdButton.Name = "addProdButton";
+            addProdButton.Size = new Size(184, 37);
+            addProdButton.TabIndex = 8;
+            addProdButton.Text = "ADD PRODUCT";
+            addProdButton.UseVisualStyleBackColor = false;
+            addProdButton.Click += addProdButton_Click;
             // 
             // byidButton
             // 
@@ -238,13 +101,14 @@
             byidButton.FlatStyle = FlatStyle.Popup;
             byidButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             byidButton.ForeColor = Color.White;
-            byidButton.Location = new Point(1157, 185);
+            byidButton.Location = new Point(990, 185);
             byidButton.Margin = new Padding(3, 2, 3, 2);
             byidButton.Name = "byidButton";
             byidButton.Size = new Size(125, 37);
             byidButton.TabIndex = 9;
             byidButton.Text = "By ID";
             byidButton.UseVisualStyleBackColor = false;
+            byidButton.Click += search_ById;
             // 
             // imageList1
             // 
@@ -254,21 +118,11 @@
             imageList1.Images.SetKeyName(0, "R (1).png");
             imageList1.Images.SetKeyName(1, "R (2).png");
             // 
-            // quantityNumericUpDown
-            // 
-            quantityNumericUpDown.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            quantityNumericUpDown.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            quantityNumericUpDown.Location = new Point(1212, 40);
-            quantityNumericUpDown.Name = "quantityNumericUpDown";
-            quantityNumericUpDown.Size = new Size(69, 29);
-            quantityNumericUpDown.TabIndex = 2;
-            quantityNumericUpDown.TextAlign = HorizontalAlignment.Center;
-            // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.LightGray;
             pictureBox1.Image = Properties.Resources.R;
-            pictureBox1.Location = new Point(931, 192);
+            pictureBox1.Location = new Point(931, 191);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(26, 27);
@@ -278,11 +132,12 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(addButton);
+            panel2.Controls.Add(addProdButton);
+            panel2.Controls.Add(byidButton);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1444, 249);
+            panel2.Size = new Size(1264, 249);
             panel2.TabIndex = 35;
             // 
             // dataGridView
@@ -306,7 +161,7 @@
             dataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView.RowTemplate.Height = 25;
             dataGridView.ShowEditingIcon = false;
-            dataGridView.Size = new Size(1297, 313);
+            dataGridView.Size = new Size(1281, 274);
             dataGridView.TabIndex = 6;
             // 
             // Column1
@@ -385,38 +240,27 @@
             panel1.Controls.Add(dataGridView);
             panel1.Location = new Point(48, 260);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1339, 376);
+            panel1.Size = new Size(1323, 337);
             panel1.TabIndex = 36;
             // 
-            // Form1
+            // InventoryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(12, 24, 33);
-            ClientSize = new Size(1444, 661);
+            ClientSize = new Size(1264, 681);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
-            Controls.Add(quantityNumericUpDown);
-            Controls.Add(byidButton);
-            Controls.Add(bynameButton);
             Controls.Add(searchTextBox);
             Controls.Add(searchLabelHeader);
-            Controls.Add(quantityLabel);
-            Controls.Add(categoryComboBox);
-            Controls.Add(coatTextBox);
-            Controls.Add(categoryLabel);
-            Controls.Add(profitLabel);
-            Controls.Add(profitTextBox);
-            Controls.Add(nameTextBox);
-            Controls.Add(costLabel);
-            Controls.Add(nameLabel);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Form1";
+            Name = "InventoryForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Shop Manager";
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
@@ -427,21 +271,10 @@
 
         #endregion
 
-        private Label nameLabel;
-        private Label costLabel;
-        private TextBox nameTextBox;
-        private TextBox profitTextBox;
-        private Label profitLabel;
-        private Label categoryLabel;
-        private TextBox coatTextBox;
-        private ComboBox categoryComboBox;
-        private Label quantityLabel;
-        private Button addButton;
         private Label searchLabelHeader;
         private TextBox searchTextBox;
-        private Button bynameButton;
+        private Button addProdButton;
         private Button byidButton;
-        private NumericUpDown quantityNumericUpDown;
         private ImageList imageList1;
         private PictureBox pictureBox1;
         private Panel panel2;
