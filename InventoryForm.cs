@@ -126,6 +126,14 @@ namespace shopManager
         {
             LoadProductsToDataGridView();
         }
+
+        private void home2Button_Click(object sender, EventArgs e)
+        {
+            HomepageForm home = new HomepageForm();
+            this.Hide();
+            home.ShowDialog();
+            this.Close();
+        }
     }
 
 }
