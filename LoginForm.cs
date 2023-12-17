@@ -15,18 +15,22 @@ namespace shopManager
         public LoginForm()
         {
             InitializeComponent();
+
+            // Ensure that the entire application is closed when MyForm is closed
+            this.FormClosed += (sender, e) => Application.Exit();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (usernameTextBox.Text != "admin" || passwordTextBox.Text != "1324")
-                MessageBox.Show("Wrong Username Or Password.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (usernameTextBox.Text != "admin")
+                MessageBox.Show("Wrong Username.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (passwordTextBox.Text != "1324")
+                MessageBox.Show("Wrong Password.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                HomepageForm home= HomepageForm.Instance;
+                HomepageForm home = new HomepageForm();
                 this.Hide();
-                home.ShowDialog();
-                this.Close();
+                home.Show();
             }
         }
     }

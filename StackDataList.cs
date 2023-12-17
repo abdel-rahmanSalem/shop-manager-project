@@ -48,11 +48,18 @@ namespace shopManager
         {
             if (Top == null) return null;
             Node p = Top;
-            if (p.Data.ID == id) return Top.Data;
-            while (p.Next.Data.ID != id)
+
+            if (p.Data.ID == id) return p.Data;
+
+            while (p.Next != null)
+            {
+                if (p.Next.Data.ID == id)
+                    return p.Next.Data;
+
                 p = p.Next;
-            if (p == null) return null;
-            else return p.Next.Data;
+            }
+
+            return null;
         }
 
         public void RemovedSpesProduct(int id)

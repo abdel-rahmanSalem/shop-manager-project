@@ -26,11 +26,16 @@ namespace shopManager
         private InventoryForm()
         {
             InitializeComponent();
+
             dataList = new StackDataList();
+
+            // Ensure that the entire application is closed when MyForm is closed
+            this.FormClosed += (sender, e) => Application.Exit();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             dataGridView.CellContentClick += dataGridView_CellContentClick;
 
             // Load existing products into dataGridView
@@ -50,10 +55,22 @@ namespace shopManager
             // Get all products from the stack
             List<Product> products = dataList.GetAllProducts();
 
-            // Populate dataGridView with product data
-            foreach (Product product in products)
+            for (int i = 0; i < products.Count(); i++)
             {
-                dataGridView.Rows.Add(product.Name, product.ID, product.Category, product.Quantity, product.TotalPrice(), "Edit", "Delete");
+                dataGridView.Rows.Add(products[i].Name, products[i].ID, products[i].Category, products[i].Quantity, products[i].TotalPrice(), "Edit", "Delete");
+
+                if (products[i].Category == "Phones")
+                {
+                    dataGridView.Rows[i].Cells[2].Style.BackColor = Color.DarkOrange;
+                }
+                else if (products[i].Category == "Cameras")
+                {
+                    dataGridView.Rows[i].Cells[2].Style.BackColor = Color.DarkGreen;
+                }
+                else
+                {
+                    dataGridView.Rows[i].Cells[2].Style.BackColor = Color.DarkBlue;
+                }
             }
         }
 
@@ -124,6 +141,7 @@ namespace shopManager
 
         private void cancelSearchButton_Click(object sender, EventArgs e)
         {
+            searchTextBox.Text = "";
             LoadProductsToDataGridView();
         }
 
@@ -131,9 +149,7 @@ namespace shopManager
         {
             HomepageForm home = new HomepageForm();
             this.Hide();
-            home.ShowDialog();
-            this.Close();
+            home.Show();
         }
     }
-
 }

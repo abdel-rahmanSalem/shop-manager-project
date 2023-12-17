@@ -12,38 +12,25 @@ namespace shopManager
 {
     public partial class HomepageForm : Form
     {
-        public static HomepageForm instance;
-        public static HomepageForm Instance
-        {
-            get
-            {
-                if (instance == null || instance.IsDisposed)
-                {
-                    instance = new HomepageForm();
-                }
-                return instance;
-            }
-        }
         public HomepageForm()
         {
             InitializeComponent();
+
+            // Ensure that the entire application is closed when MyForm is closed
+            this.FormClosed += (sender, e) => Application.Exit();
         }
 
         private void addprodButton_Click(object sender, EventArgs e)
         {
             AddProductForm addform = new AddProductForm();
-            this.Hide();
             addform.ShowDialog();
-            this.Close();
         }
 
         private void inventoryButton_Click(object sender, EventArgs e)
         {
-            InventoryForm invenform = InventoryForm.Instance;
+            InventoryForm inventory = InventoryForm.Instance;
             this.Hide();
-            invenform.ShowDialog();
-            this.Close();
-
+            inventory.Show();
         }
 
 
@@ -51,8 +38,7 @@ namespace shopManager
         {
             LoginForm logout = new LoginForm();
             this.Hide();
-            logout.ShowDialog();
-            this.Close();
+            logout.Show();
         }
     }
 }

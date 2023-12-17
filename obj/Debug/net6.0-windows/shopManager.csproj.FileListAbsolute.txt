@@ -73,3 +73,4 @@ C:\Users\7dedd\OneDrive\Desktop\lastupdate\shop-manager-project\obj\Debug\net6.0
 C:\Users\7dedd\OneDrive\Desktop\lastupdate\shop-manager-project\obj\Debug\net6.0-windows\shopManager.genruntimeconfig.cache
 C:\Users\7dedd\OneDrive\Desktop\lastupdate\shop-manager-project\obj\Debug\net6.0-windows\ref\shopManager.dll
 C:\Users\7dedd\OneDrive\Desktop\lastupdate\shop-manager-project\obj\Debug\net6.0-windows\shopManager.HomepageForm.resources
+C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.HomepageForm.resources
