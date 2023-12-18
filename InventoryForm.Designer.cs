@@ -40,6 +40,10 @@
             imageList1 = new ImageList(components);
             searchIcon = new PictureBox();
             dataGridView = new DataGridView();
+            panel1 = new Panel();
+            cancelSearchButton = new Button();
+            addProdButton = new Button();
+            home2Button = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -47,10 +51,6 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewButtonColumn();
             Column7 = new DataGridViewButtonColumn();
-            panel1 = new Panel();
-            cancelSearchButton = new Button();
-            addProdButton = new Button();
-            home2Button = new Button();
             ((System.ComponentModel.ISupportInitialize)searchIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panel1.SuspendLayout();
@@ -130,83 +130,6 @@
             dataGridView.Size = new Size(1161, 455);
             dataGridView.TabIndex = 6;
             // 
-            // Column1
-            // 
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            Column1.HeaderText = "Name";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "ID";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            Column3.DefaultCellStyle = dataGridViewCellStyle2;
-            Column3.HeaderText = "Category";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            Column4.DefaultCellStyle = dataGridViewCellStyle3;
-            Column4.HeaderText = "Quantity";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Price";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(6, 90, 37);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(6, 90, 37);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            Column6.DefaultCellStyle = dataGridViewCellStyle4;
-            Column6.FlatStyle = FlatStyle.Flat;
-            Column6.HeaderText = "";
-            Column6.MinimumWidth = 6;
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            Column6.Text = "Edit";
-            Column6.UseColumnTextForButtonValue = true;
-            // 
-            // Column7
-            // 
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(63, 15, 22);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(63, 15, 22);
-            dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            Column7.DefaultCellStyle = dataGridViewCellStyle5;
-            Column7.FlatStyle = FlatStyle.Flat;
-            Column7.HeaderText = "";
-            Column7.MinimumWidth = 6;
-            Column7.Name = "Column7";
-            Column7.ReadOnly = true;
-            Column7.Text = "Delete";
-            Column7.UseColumnTextForButtonValue = true;
-            // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
@@ -272,6 +195,84 @@
             home2Button.TabIndex = 37;
             home2Button.UseVisualStyleBackColor = false;
             home2Button.Click += home2Button_Click;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            Column1.HeaderText = "Name";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "ID";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            Column3.HeaderText = "Category";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            Column4.HeaderText = "Quantity";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Price";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(6, 90, 37);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(6, 90, 37);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            Column6.DefaultCellStyle = dataGridViewCellStyle4;
+            Column6.FlatStyle = FlatStyle.Flat;
+            Column6.HeaderText = "";
+            Column6.MinimumWidth = 6;
+            Column6.Name = "Column6";
+            Column6.ReadOnly = true;
+            Column6.Text = "Sell";
+            Column6.UseColumnTextForButtonValue = true;
+            // 
+            // Column7
+            // 
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(63, 15, 22);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(63, 15, 22);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            Column7.DefaultCellStyle = dataGridViewCellStyle5;
+            Column7.FlatStyle = FlatStyle.Flat;
+            Column7.HeaderText = "";
+            Column7.MinimumWidth = 6;
+            Column7.Name = "Column7";
+            Column7.ReadOnly = true;
+            Column7.Text = "Delete";
+            Column7.UseColumnTextForButtonValue = true;
             // 
             // InventoryForm
             // 
