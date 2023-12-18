@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,52 +14,76 @@ namespace shopManager
     public partial class SellProductForm : Form
     {
         InventoryForm inventoryForm = InventoryForm.Instance;
-        StackDataList dataUpdate;
-        public int iD;
-        public SellProductForm(int id, StackDataList dataList)
+        StockForm stockForm = StockForm.Instance;
+
+        private int iD;
+        public SellProductForm(int id, char flag)
         {
             InitializeComponent();
-            iD = id;
-            dataUpdate = dataList;
+            if (flag == 'S')
+            {
+                iD = id;
+            }
+            else
+            {
+                sellIdLapel.Visible = true;
+                sellIdTextBox.Visible = true;
+            }
         }
 
         private void SellProductForm_Load(object sender, EventArgs e)
         {
+        }
 
+        private void sellIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            iD = int.Parse(sellIdTextBox.Text);
         }
 
         private void quantityNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
 
-            if (quantityNumericUpDown.Value > 0 && dataUpdate.GetSpecificProductById(iD) != null)
+            if (quantityNumericUpDown.Value >= 0 && InventoryForm.dataList.GetSpecificProductById(iD) != null)
             {
-                quantityNumericUpDown.Maximum = dataUpdate.GetSpecificProductById(iD).Quantity;
+                quantityNumericUpDown.Maximum = InventoryForm.dataList.GetSpecificProductById(iD).Quantity;
             }
             else
             {
                 quantityNumericUpDown.Enabled = false;
                 return;
             }
-        }
-
-        private void sellButton_Click(object sender, EventArgs e)
-        {
-
-            dataUpdate.Update(int.Parse(quantityNumericUpDown.Text), iD);
+            Calculatetotalprice.Visible = true;
             if (quantityNumericUpDown.Value <= 0)
             {
                 return;
             }
-            else if (quantityNumericUpDown.Value > 0 && dataUpdate.GetSpecificProductById(iD) != null)
+
+            int enteredQuantity = (int)quantityNumericUpDown.Value;
+
+            if (enteredQuantity > 0)
             {
-                double totalprice = int.Parse(quantityNumericUpDown.Text) * dataUpdate.GetSpecificProductById(iD).TotalPrice();
+                double totalprice = enteredQuantity * InventoryForm.dataList.GetSpecificProductById(iD).TotalPrice();
                 Calculatetotalprice.Text = totalprice.ToString();
             }
+        }
 
-            if (dataUpdate.GetSpecificProductById(iD).Quantity == 0)
+        private void sellButton_Click(object sender, EventArgs e)
+        {
+            InventoryForm.dataList.Update(int.Parse(quantityNumericUpDown.Text), iD);
+            if (quantityNumericUpDown.Value <= 0)
+            {
+                MessageBox.Show("Please enter a valid quantity more than zero.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (quantityNumericUpDown.Value > 0 && InventoryForm.dataList.GetSpecificProductById(iD) != null)
+            {
+                double totalprice = (int)quantityNumericUpDown.Value * InventoryForm.dataList.GetSpecificProductById(iD).TotalPrice();
+                stockForm.addOrder(InventoryForm.dataList.GetSpecificProductById(iD).Name, int.Parse(quantityNumericUpDown.Text), totalprice);
+            }
+
+            if (InventoryForm.dataList.GetSpecificProductById(iD).Quantity == 0)
             {
                 quantityNumericUpDown.Enabled = false;
-                dataUpdate.RemovedSpesProduct(iD);
+                InventoryForm.dataList.RemovedSpesProduct(iD);
             }
             quantityNumericUpDown.Value = 0;
             inventoryForm.LoadProductsToDataGridView();

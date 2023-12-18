@@ -121,7 +121,7 @@
             inventoryButton.Name = "inventoryButton";
             inventoryButton.Size = new Size(396, 89);
             inventoryButton.TabIndex = 4;
-            inventoryButton.Text = "Inventory";
+            inventoryButton.Text = "Stock";
             inventoryButton.UseVisualStyleBackColor = false;
             inventoryButton.Click += inventoryButton_Click;
             // 
@@ -136,8 +136,9 @@
             stockButton.Name = "stockButton";
             stockButton.Size = new Size(402, 89);
             stockButton.TabIndex = 3;
-            stockButton.Text = "Stock";
+            stockButton.Text = "Shopping Cart";
             stockButton.UseVisualStyleBackColor = false;
+            stockButton.Click += stockButton_Click;
             // 
             // addprodButton
             // 
@@ -150,7 +151,7 @@
             addprodButton.Name = "addprodButton";
             addprodButton.Size = new Size(392, 89);
             addprodButton.TabIndex = 2;
-            addprodButton.Text = "Add Product";
+            addprodButton.Text = "Ubgrade Stock";
             addprodButton.UseVisualStyleBackColor = false;
             addprodButton.Click += addprodButton_Click;
             // 

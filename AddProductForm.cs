@@ -96,5 +96,10 @@ namespace shopManager
             costTextBox.Text = "";
             profitTextBox.Text = "";
         }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

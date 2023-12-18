@@ -34,6 +34,8 @@
             Calculatetotalprice = new TextBox();
             sellButton = new Button();
             cancelButton = new Button();
+            sellIdTextBox = new TextBox();
+            sellIdLapel = new Label();
             ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).BeginInit();
             SuspendLayout();
             // 
@@ -43,9 +45,9 @@
             quantityLabel.BackColor = Color.Transparent;
             quantityLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
             quantityLabel.ForeColor = Color.WhiteSmoke;
-            quantityLabel.Location = new Point(34, 94);
+            quantityLabel.Location = new Point(34, 133);
             quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new Size(118, 82);
+            quantityLabel.Size = new Size(118, 30);
             quantityLabel.TabIndex = 23;
             quantityLabel.Text = "Quantity";
             // 
@@ -55,12 +57,12 @@
             quantityNumericUpDown.BackColor = Color.LightGray;
             quantityNumericUpDown.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             quantityNumericUpDown.ForeColor = Color.Black;
-            quantityNumericUpDown.Location = new Point(196, 98);
+            quantityNumericUpDown.Location = new Point(196, 137);
             quantityNumericUpDown.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             quantityNumericUpDown.Name = "quantityNumericUpDown";
             quantityNumericUpDown.ReadOnly = true;
             quantityNumericUpDown.Size = new Size(250, 29);
-            quantityNumericUpDown.TabIndex = 24;
+            quantityNumericUpDown.TabIndex = 1;
             quantityNumericUpDown.TextAlign = HorizontalAlignment.Center;
             quantityNumericUpDown.ValueChanged += quantityNumericUpDown_ValueChanged;
             // 
@@ -70,25 +72,26 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(34, 186);
+            label1.Location = new Point(38, 195);
             label1.Name = "label1";
-            label1.Size = new Size(131, 82);
+            label1.Size = new Size(131, 29);
             label1.TabIndex = 25;
-            label1.Text = "TotalPrice";
+            label1.Text = "TotalPrice: ";
             // 
             // Calculatetotalprice
             // 
             Calculatetotalprice.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            Calculatetotalprice.BackColor = Color.FromArgb(44, 45, 60);
+            Calculatetotalprice.BackColor = Color.FromArgb(19, 22, 32);
             Calculatetotalprice.BorderStyle = BorderStyle.None;
             Calculatetotalprice.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             Calculatetotalprice.ForeColor = Color.White;
-            Calculatetotalprice.Location = new Point(192, 186);
+            Calculatetotalprice.Location = new Point(196, 195);
             Calculatetotalprice.Margin = new Padding(3, 2, 3, 2);
             Calculatetotalprice.Name = "Calculatetotalprice";
             Calculatetotalprice.ReadOnly = true;
             Calculatetotalprice.Size = new Size(255, 29);
-            Calculatetotalprice.TabIndex = 26;
+            Calculatetotalprice.TabIndex = 100;
+            Calculatetotalprice.Visible = false;
             // 
             // sellButton
             // 
@@ -102,7 +105,7 @@
             sellButton.Margin = new Padding(3, 2, 3, 2);
             sellButton.Name = "sellButton";
             sellButton.Size = new Size(215, 37);
-            sellButton.TabIndex = 27;
+            sellButton.TabIndex = 2;
             sellButton.Text = "Sell";
             sellButton.UseVisualStyleBackColor = false;
             sellButton.Click += sellButton_Click;
@@ -119,10 +122,38 @@
             cancelButton.Margin = new Padding(3, 2, 3, 2);
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(192, 37);
-            cancelButton.TabIndex = 28;
+            cancelButton.TabIndex = 3;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = false;
             cancelButton.Click += cancelButton_Click;
+            // 
+            // sellIdTextBox
+            // 
+            sellIdTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            sellIdTextBox.BackColor = Color.FromArgb(44, 45, 60);
+            sellIdTextBox.BorderStyle = BorderStyle.None;
+            sellIdTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            sellIdTextBox.ForeColor = Color.White;
+            sellIdTextBox.Location = new Point(196, 73);
+            sellIdTextBox.Margin = new Padding(3, 2, 3, 2);
+            sellIdTextBox.Name = "sellIdTextBox";
+            sellIdTextBox.Size = new Size(255, 29);
+            sellIdTextBox.TabIndex = 0;
+            sellIdTextBox.Visible = false;
+            sellIdTextBox.TextChanged += sellIdTextBox_TextChanged;
+            // 
+            // sellIdLapel
+            // 
+            sellIdLapel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            sellIdLapel.BackColor = Color.Transparent;
+            sellIdLapel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            sellIdLapel.ForeColor = Color.WhiteSmoke;
+            sellIdLapel.Location = new Point(38, 73);
+            sellIdLapel.Name = "sellIdLapel";
+            sellIdLapel.Size = new Size(131, 33);
+            sellIdLapel.TabIndex = 29;
+            sellIdLapel.Text = "Product ID";
+            sellIdLapel.Visible = false;
             // 
             // SellProductForm
             // 
@@ -130,6 +161,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(19, 22, 32);
             ClientSize = new Size(494, 400);
+            Controls.Add(sellIdTextBox);
+            Controls.Add(sellIdLapel);
             Controls.Add(cancelButton);
             Controls.Add(sellButton);
             Controls.Add(Calculatetotalprice);
@@ -158,5 +191,7 @@
         private TextBox Calculatetotalprice;
         private Button sellButton;
         private Button cancelButton;
+        private TextBox sellIdTextBox;
+        private Label sellIdLapel;
     }
 }
