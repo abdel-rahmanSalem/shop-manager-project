@@ -84,12 +84,11 @@ namespace shopManager
                 // Check if the "Edit" button is clicked
                 if (columnIndex == dataGridView.Columns["Column6"].Index)
                 {
-                    // Handle edit logic, for example, show a form for editing
-                    // You can use the rowIndex to get the corresponding Product from the stack
-                    // Update the product in the stack and reload data into the dataGridView
-                    // Example:
-                    // Product selectedProduct = dataList.GetProductAtIndex(rowIndex);
-                    // ShowEditForm(selectedProduct);
+                    string prodId = dataGridView.Rows[rowIndex].Cells[1].Value.ToString();
+                    int id = int.Parse(prodId);
+                    SellProductForm sellProduct = new SellProductForm(id, dataList);
+                    sellProduct.ShowDialog();
+
                 }
                 // Check if the "Delete" button is clicked
                 else if (columnIndex == dataGridView.Columns["Column7"].Index)

@@ -40,6 +40,10 @@
             imageList1 = new ImageList(components);
             searchIcon = new PictureBox();
             dataGridView = new DataGridView();
+            panel1 = new Panel();
+            cancelSearchButton = new Button();
+            addProdButton = new Button();
+            home2Button = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -47,10 +51,6 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewButtonColumn();
             Column7 = new DataGridViewButtonColumn();
-            panel1 = new Panel();
-            cancelSearchButton = new Button();
-            addProdButton = new Button();
-            home2Button = new Button();
             ((System.ComponentModel.ISupportInitialize)searchIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panel1.SuspendLayout();
@@ -61,9 +61,9 @@
             searchLabelHeader.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             searchLabelHeader.Font = new Font("Arial", 19F, FontStyle.Regular, GraphicsUnit.Point);
             searchLabelHeader.ForeColor = Color.LightGray;
-            searchLabelHeader.Location = new Point(176, 21);
+            searchLabelHeader.Location = new Point(201, 28);
             searchLabelHeader.Name = "searchLabelHeader";
-            searchLabelHeader.Size = new Size(101, 110);
+            searchLabelHeader.Size = new Size(115, 147);
             searchLabelHeader.TabIndex = 24;
             searchLabelHeader.Text = "Search";
             // 
@@ -74,10 +74,9 @@
             searchTextBox.BorderStyle = BorderStyle.None;
             searchTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             searchTextBox.ForeColor = Color.Black;
-            searchTextBox.Location = new Point(270, 21);
-            searchTextBox.Margin = new Padding(3, 2, 3, 2);
+            searchTextBox.Location = new Point(309, 28);
             searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(705, 29);
+            searchTextBox.Size = new Size(806, 36);
             searchTextBox.TabIndex = 7;
             // 
             // imageList1
@@ -94,11 +93,10 @@
             searchIcon.BackColor = Color.LightGray;
             searchIcon.Cursor = Cursors.Hand;
             searchIcon.Image = Properties.Resources.R;
-            searchIcon.Location = new Point(943, 22);
-            searchIcon.Margin = new Padding(3, 2, 3, 2);
-            searchIcon.MaximumSize = new Size(26, 25);
+            searchIcon.Location = new Point(1078, 29);
+            searchIcon.MaximumSize = new Size(30, 33);
             searchIcon.Name = "searchIcon";
-            searchIcon.Size = new Size(26, 25);
+            searchIcon.Size = new Size(30, 33);
             searchIcon.SizeMode = PictureBoxSizeMode.StretchImage;
             searchIcon.TabIndex = 33;
             searchIcon.TabStop = false;
@@ -117,8 +115,9 @@
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
             dataGridView.GridColor = Color.FromArgb(23, 37, 47);
-            dataGridView.Location = new Point(27, 76);
-            dataGridView.MaximumSize = new Size(1461, 10000);
+            dataGridView.Location = new Point(31, 101);
+            dataGridView.Margin = new Padding(3, 4, 3, 4);
+            dataGridView.MaximumSize = new Size(1670, 13333);
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
             dataGridView.ReadOnly = true;
@@ -127,8 +126,72 @@
             dataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView.RowTemplate.Height = 25;
             dataGridView.ShowEditingIcon = false;
-            dataGridView.Size = new Size(1161, 455);
+            dataGridView.Size = new Size(1327, 607);
             dataGridView.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.None;
+            panel1.AutoScroll = true;
+            panel1.BackColor = Color.FromArgb(15, 16, 43);
+            panel1.Controls.Add(cancelSearchButton);
+            panel1.Controls.Add(dataGridView);
+            panel1.Controls.Add(searchIcon);
+            panel1.Controls.Add(searchTextBox);
+            panel1.Controls.Add(searchLabelHeader);
+            panel1.Location = new Point(16, 67);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1417, 739);
+            panel1.TabIndex = 36;
+            // 
+            // cancelSearchButton
+            // 
+            cancelSearchButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            cancelSearchButton.BackColor = Color.Maroon;
+            cancelSearchButton.Cursor = Cursors.Hand;
+            cancelSearchButton.FlatStyle = FlatStyle.Popup;
+            cancelSearchButton.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            cancelSearchButton.ForeColor = Color.AliceBlue;
+            cancelSearchButton.Location = new Point(1126, 28);
+            cancelSearchButton.MaximumSize = new Size(33, 39);
+            cancelSearchButton.Name = "cancelSearchButton";
+            cancelSearchButton.Size = new Size(33, 39);
+            cancelSearchButton.TabIndex = 37;
+            cancelSearchButton.Text = "X";
+            cancelSearchButton.UseVisualStyleBackColor = false;
+            cancelSearchButton.Click += cancelSearchButton_Click;
+            // 
+            // addProdButton
+            // 
+            addProdButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            addProdButton.BackColor = Color.Maroon;
+            addProdButton.Cursor = Cursors.Hand;
+            addProdButton.FlatStyle = FlatStyle.Popup;
+            addProdButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            addProdButton.ForeColor = Color.White;
+            addProdButton.Location = new Point(1163, 812);
+            addProdButton.Name = "addProdButton";
+            addProdButton.Size = new Size(210, 49);
+            addProdButton.TabIndex = 8;
+            addProdButton.Text = "ADD PRODUCT";
+            addProdButton.UseVisualStyleBackColor = false;
+            addProdButton.Click += addProdButton_Click;
+            // 
+            // home2Button
+            // 
+            home2Button.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            home2Button.BackColor = Color.FromArgb(15, 16, 43);
+            home2Button.BackgroundImage = Properties.Resources.homepage1;
+            home2Button.BackgroundImageLayout = ImageLayout.Zoom;
+            home2Button.FlatStyle = FlatStyle.Flat;
+            home2Button.ForeColor = Color.FromArgb(15, 16, 43);
+            home2Button.Location = new Point(59, 829);
+            home2Button.Name = "home2Button";
+            home2Button.Size = new Size(83, 67);
+            home2Button.TabIndex = 37;
+            home2Button.UseVisualStyleBackColor = false;
+            home2Button.Click += home2Button_Click;
             // 
             // Column1
             // 
@@ -187,7 +250,7 @@
             Column6.MinimumWidth = 6;
             Column6.Name = "Column6";
             Column6.ReadOnly = true;
-            Column6.Text = "Edit";
+            Column6.Text = "Sell";
             Column6.UseColumnTextForButtonValue = true;
             // 
             // Column7
@@ -207,84 +270,17 @@
             Column7.Text = "Delete";
             Column7.UseColumnTextForButtonValue = true;
             // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.None;
-            panel1.AutoScroll = true;
-            panel1.BackColor = Color.FromArgb(15, 16, 43);
-            panel1.Controls.Add(cancelSearchButton);
-            panel1.Controls.Add(dataGridView);
-            panel1.Controls.Add(searchIcon);
-            panel1.Controls.Add(searchTextBox);
-            panel1.Controls.Add(searchLabelHeader);
-            panel1.Location = new Point(14, 50);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1240, 554);
-            panel1.TabIndex = 36;
-            // 
-            // cancelSearchButton
-            // 
-            cancelSearchButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            cancelSearchButton.BackColor = Color.Maroon;
-            cancelSearchButton.Cursor = Cursors.Hand;
-            cancelSearchButton.FlatStyle = FlatStyle.Popup;
-            cancelSearchButton.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            cancelSearchButton.ForeColor = Color.AliceBlue;
-            cancelSearchButton.Location = new Point(985, 21);
-            cancelSearchButton.Margin = new Padding(3, 2, 3, 2);
-            cancelSearchButton.MaximumSize = new Size(29, 29);
-            cancelSearchButton.Name = "cancelSearchButton";
-            cancelSearchButton.Size = new Size(29, 29);
-            cancelSearchButton.TabIndex = 37;
-            cancelSearchButton.Text = "X";
-            cancelSearchButton.UseVisualStyleBackColor = false;
-            cancelSearchButton.Click += cancelSearchButton_Click;
-            // 
-            // addProdButton
-            // 
-            addProdButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            addProdButton.BackColor = Color.Maroon;
-            addProdButton.Cursor = Cursors.Hand;
-            addProdButton.FlatStyle = FlatStyle.Popup;
-            addProdButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            addProdButton.ForeColor = Color.White;
-            addProdButton.Location = new Point(1018, 609);
-            addProdButton.Margin = new Padding(3, 2, 3, 2);
-            addProdButton.Name = "addProdButton";
-            addProdButton.Size = new Size(184, 37);
-            addProdButton.TabIndex = 8;
-            addProdButton.Text = "ADD PRODUCT";
-            addProdButton.UseVisualStyleBackColor = false;
-            addProdButton.Click += addProdButton_Click;
-            // 
-            // home2Button
-            // 
-            home2Button.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            home2Button.BackColor = Color.FromArgb(15, 16, 43);
-            home2Button.BackgroundImage = Properties.Resources.homepage1;
-            home2Button.BackgroundImageLayout = ImageLayout.Zoom;
-            home2Button.FlatStyle = FlatStyle.Flat;
-            home2Button.ForeColor = Color.FromArgb(15, 16, 43);
-            home2Button.Location = new Point(52, 622);
-            home2Button.Margin = new Padding(3, 2, 3, 2);
-            home2Button.Name = "home2Button";
-            home2Button.Size = new Size(73, 50);
-            home2Button.TabIndex = 37;
-            home2Button.UseVisualStyleBackColor = false;
-            home2Button.Click += home2Button_Click;
-            // 
             // InventoryForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(12, 24, 33);
             BackgroundImage = Properties.Resources.Screenshot__54_;
-            ClientSize = new Size(1264, 661);
+            ClientSize = new Size(1445, 881);
             Controls.Add(home2Button);
             Controls.Add(addProdButton);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "InventoryForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Shop Manager";
