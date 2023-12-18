@@ -74,5 +74,21 @@ namespace shopManager
                 p = p.Next;
             p.Next = p.Next.Next;
         }
+        public void Update(int newQuantity, int id)
+        {
+            Node Update = Top;
+            while (Update != null)
+            {
+                if (Update.Data.ID == id)
+                {
+                    int oldQuantity = Update.Data.Quantity;
+                    Update.Data = new Product(Update.Data.Name, Update.Data.Category, oldQuantity - newQuantity, id, Update.Data.Cost, Update.Data.Profit);
+                    return;
+                }
+
+                Update = Update.Next;
+
+            }
+        }
     }
 }
