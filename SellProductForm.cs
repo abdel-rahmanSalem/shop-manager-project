@@ -13,13 +13,14 @@ namespace shopManager
     public partial class SellProductForm : Form
     {
         InventoryForm inventoryForm = InventoryForm.Instance;
-        StackDataList dataUpdate;
+        StockForm stockForm = StockForm.Instance;
+
         public int iD;
-        public SellProductForm(int id, StackDataList dataList)
+
+        public SellProductForm(int id)
         {
             InitializeComponent();
-            iD = id;
-            dataUpdate = dataList;
+            iD = 1111110;
         }
 
         private void SellProductForm_Load(object sender, EventArgs e)
@@ -30,9 +31,9 @@ namespace shopManager
         private void quantityNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
 
-            if (quantityNumericUpDown.Value > 0 && dataUpdate.GetSpecificProductById(iD) != null)
+            if (quantityNumericUpDown.Value > 0 && InventoryForm.dataList.GetSpecificProductById(iD) != null)
             {
-                quantityNumericUpDown.Maximum = dataUpdate.GetSpecificProductById(iD).Quantity;
+                quantityNumericUpDown.Maximum = InventoryForm.dataList.GetSpecificProductById(iD).Quantity;
             }
             else
             {
@@ -44,21 +45,22 @@ namespace shopManager
         private void sellButton_Click(object sender, EventArgs e)
         {
 
-            dataUpdate.Update(int.Parse(quantityNumericUpDown.Text), iD);
+            InventoryForm.dataList.Update(int.Parse(quantityNumericUpDown.Text), iD);
             if (quantityNumericUpDown.Value <= 0)
             {
                 return;
             }
-            else if (quantityNumericUpDown.Value > 0 && dataUpdate.GetSpecificProductById(iD) != null)
+            else if (quantityNumericUpDown.Value > 0 && InventoryForm.dataList.GetSpecificProductById(iD) != null)
             {
-                double totalprice = int.Parse(quantityNumericUpDown.Text) * dataUpdate.GetSpecificProductById(iD).TotalPrice();
+                double totalprice = int.Parse(quantityNumericUpDown.Text) * InventoryForm.dataList.GetSpecificProductById(iD).TotalPrice();
                 Calculatetotalprice.Text = totalprice.ToString();
+                stockForm.addOrder(InventoryForm.dataList.GetSpecificProductById(iD).Name, int.Parse(quantityNumericUpDown.Text),totalprice);
             }
 
-            if (dataUpdate.GetSpecificProductById(iD).Quantity == 0)
+            if (InventoryForm.dataList.GetSpecificProductById(iD).Quantity == 0)
             {
                 quantityNumericUpDown.Enabled = false;
-                dataUpdate.RemovedSpesProduct(iD);
+                InventoryForm.dataList.RemovedSpesProduct(iD);
             }
             quantityNumericUpDown.Value = 0;
             inventoryForm.LoadProductsToDataGridView();

@@ -40,5 +40,13 @@ namespace shopManager
             this.Hide();
             logout.Show();
         }
+
+        private void stockButton_Click(object sender, EventArgs e)
+        {
+            StockForm stockForm = StockForm.Instance;
+            this.Hide();
+            stockForm.Show();
+            
+        }
     }
 }

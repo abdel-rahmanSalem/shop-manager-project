@@ -81,12 +81,12 @@ namespace shopManager
                 int columnIndex = dataGrid.ColumnIndex;
                 int rowIndex = dataGrid.RowIndex;
 
-                // Check if the "Edit" button is clicked
+                // Check if the "Sell" button is clicked
                 if (columnIndex == dataGridView.Columns["Column6"].Index)
                 {
                     string prodId = dataGridView.Rows[rowIndex].Cells[1].Value.ToString();
                     int id = int.Parse(prodId);
-                    SellProductForm sellProduct = new SellProductForm(id, dataList);
+                    SellProductForm sellProduct = new SellProductForm(id);
                     sellProduct.ShowDialog();
 
                 }

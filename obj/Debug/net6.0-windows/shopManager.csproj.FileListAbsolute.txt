@@ -96,3 +96,4 @@ H:\shop-manager-project\obj\Debug\net6.0-windows\shopManager.pdb
 H:\shop-manager-project\obj\Debug\net6.0-windows\shopManager.genruntimeconfig.cache
 H:\shop-manager-project\obj\Debug\net6.0-windows\ref\shopManager.dll
 C:\Users\modys\Desktop\shopManager\obj\Debug\net6.0-windows\shopManager.SellProductForm.resources
+H:\shop-manager-project\obj\Debug\net6.0-windows\shopManager.StockForm.resources
