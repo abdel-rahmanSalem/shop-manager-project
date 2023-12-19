@@ -33,15 +33,6 @@ namespace shopManager
             this.FormClosed += (sender, e) => Application.Exit();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            dataGridView.CellContentClick += dataGridView_CellContentClick;
-
-            // Load existing products into dataGridView
-            LoadProductsToDataGridView();
-
-        }
         private void addProdButton_Click(object sender, EventArgs e)
         {
             AddProductForm addProduct = new AddProductForm();
@@ -61,7 +52,7 @@ namespace shopManager
 
                 if (products[i].Category == "Phones")
                 {
-                    dataGridView.Rows[i].Cells[2].Style.BackColor = Color.DarkOrange;
+                    dataGridView.Rows[i].Cells[2].Style.BackColor = Color.Red;
                 }
                 else if (products[i].Category == "Cameras")
                 {
@@ -108,7 +99,21 @@ namespace shopManager
             // Update UI with the retrieved product information
             dataGridView.Rows.Add(product.Name, product.ID, product.Category, product.Quantity, product.TotalPrice(), "Edit", "Delete");
         }
-        private void searchIcon_Click(object sender, EventArgs e)
+
+        private void cancelSearchButton_Click(object sender, EventArgs e)
+        {
+            searchTextBox.Text = "";
+            LoadProductsToDataGridView();
+        }
+
+        private void home2Button_Click(object sender, EventArgs e)
+        {
+            HomepageForm home = new HomepageForm();
+            this.Hide();
+            home.Show();
+        }
+
+        private void searchIcon_Click_1(object sender, EventArgs e)
         {
             string proID = searchTextBox.Text;
 
@@ -138,17 +143,12 @@ namespace shopManager
             }
         }
 
-        private void cancelSearchButton_Click(object sender, EventArgs e)
+        private void InventoryForm_Load(object sender, EventArgs e)
         {
-            searchTextBox.Text = "";
-            LoadProductsToDataGridView();
-        }
+            dataGridView.CellContentClick += dataGridView_CellContentClick;
 
-        private void home2Button_Click(object sender, EventArgs e)
-        {
-            HomepageForm home = new HomepageForm();
-            this.Hide();
-            home.Show();
+            // Load existing products into dataGridView
+            LoadProductsToDataGridView();
         }
     }
 }

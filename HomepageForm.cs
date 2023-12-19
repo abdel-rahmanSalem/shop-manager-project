@@ -48,5 +48,7 @@ namespace shopManager
             stockForm.Show();
 
         }
+
+       
     }
 }
