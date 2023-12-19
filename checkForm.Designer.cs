@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckForm));
             groupBox1 = new GroupBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -88,7 +89,7 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // checkForm
+            // CheckForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -97,8 +98,9 @@
             ClientSize = new Size(1296, 588);
             Controls.Add(button1);
             Controls.Add(groupBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
-            Name = "checkForm";
+            Name = "CheckForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "checkForm";
             WindowState = FormWindowState.Maximized;

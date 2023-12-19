@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductForm));
             quantityNumericUpDown = new NumericUpDown();
             nameLabel = new Label();
             costLabel = new Label();
@@ -242,6 +243,7 @@
             Controls.Add(nameLabel);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(600, 720);
             Name = "AddProductForm";
             StartPosition = FormStartPosition.CenterScreen;

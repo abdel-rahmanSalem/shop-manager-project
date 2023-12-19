@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellProductForm));
             quantityLabel = new Label();
             quantityNumericUpDown = new NumericUpDown();
             label1 = new Label();
@@ -175,6 +176,7 @@
             Controls.Add(quantityLabel);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "SellProductForm";
             StartPosition = FormStartPosition.CenterScreen;

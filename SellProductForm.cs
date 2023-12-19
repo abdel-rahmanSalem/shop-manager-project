@@ -46,12 +46,10 @@ namespace shopManager
 
             if (InventoryForm.dataList.GetSpecificProductById(iD).Quantity == 0)
             {
-                quantityNumericUpDown.Enabled = false;
                 InventoryForm.dataList.RemovedSpesProduct(iD);
-                this.Close();
             }
-            quantityNumericUpDown.Value = 0;
             inventoryForm.LoadProductsToDataGridView();
+            this.Close();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

@@ -1,0 +1,5 @@
+C:\Users\modys\Desktop\New folder\shopManager.exe
+C:\Users\modys\Desktop\New folder\shopManager.dll
+C:\Users\modys\Desktop\New folder\shopManager.deps.json
+C:\Users\modys\Desktop\New folder\shopManager.runtimeconfig.json
+C:\Users\modys\Desktop\New folder\shopManager.pdb
