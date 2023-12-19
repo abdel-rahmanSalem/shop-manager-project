@@ -35,38 +35,6 @@ namespace shopManager
         {
         }
 
-        private void sellIdTextBox_TextChanged(object sender, EventArgs e)
-        {
-            iD = int.Parse(sellIdTextBox.Text);
-        }
-
-        private void quantityNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-
-            if (quantityNumericUpDown.Value >= 0 && InventoryForm.dataList.GetSpecificProductById(iD) != null)
-            {
-                quantityNumericUpDown.Maximum = InventoryForm.dataList.GetSpecificProductById(iD).Quantity;
-            }
-            else
-            {
-                quantityNumericUpDown.Enabled = false;
-                return;
-            }
-            Calculatetotalprice.Visible = true;
-            if (quantityNumericUpDown.Value <= 0)
-            {
-                return;
-            }
-
-            int enteredQuantity = (int)quantityNumericUpDown.Value;
-
-            if (enteredQuantity > 0)
-            {
-                double totalprice = enteredQuantity * InventoryForm.dataList.GetSpecificProductById(iD).TotalPrice();
-                Calculatetotalprice.Text = totalprice.ToString();
-            }
-        }
-
         private void sellButton_Click(object sender, EventArgs e)
         {
             InventoryForm.dataList.Update(int.Parse(quantityNumericUpDown.Text), iD);
@@ -92,6 +60,37 @@ namespace shopManager
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void sellIdTextBox_TextChanged_1(object sender, EventArgs e)
+        {
+            iD = int.Parse(sellIdTextBox.Text);
+        }
+
+        private void quantityNumericUpDown_ValueChanged_1(object sender, EventArgs e)
+        {
+            if (quantityNumericUpDown.Value >= 0 && InventoryForm.dataList.GetSpecificProductById(iD) != null)
+            {
+                quantityNumericUpDown.Maximum = InventoryForm.dataList.GetSpecificProductById(iD).Quantity;
+            }
+            else
+            {
+                quantityNumericUpDown.Enabled = false;
+                return;
+            }
+            Calculatetotalprice.Visible = true;
+            if (quantityNumericUpDown.Value <= 0)
+            {
+                return;
+            }
+
+            int enteredQuantity = (int)quantityNumericUpDown.Value;
+
+            if (enteredQuantity > 0)
+            {
+                double totalprice = enteredQuantity * InventoryForm.dataList.GetSpecificProductById(iD).TotalPrice();
+                Calculatetotalprice.Text = totalprice.ToString();
+            }
         }
     }
 }

@@ -45,13 +45,29 @@ namespace shopManager
 
         private void checkOutBtn_Click(object sender, EventArgs e)
         {
+           checkForm f = new checkForm();
+            this.Hide();
+            f.Show();
+            
             dataGridView1.Rows.Clear();
         }
 
-        private void addItem_Click(object sender, EventArgs e)
+        private void addItemBtn_Click(object sender, EventArgs e)
         {
             SellProductForm sellProduct = new SellProductForm(0, 'C');
             sellProduct.ShowDialog();
+        }
+
+        private void home3buttnPage_Click(object sender, EventArgs e)
+        {
+            HomepageForm home = new HomepageForm();
+            this.Hide();
+            home.Show();
+        }
+
+        private void StockForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

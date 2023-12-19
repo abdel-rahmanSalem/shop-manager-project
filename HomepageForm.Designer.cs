@@ -29,303 +29,297 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageForm));
-            panel1 = new Panel();
-            homepageLabel = new Label();
-            notificationPictureBox = new PictureBox();
-            profilePictureBox = new PictureBox();
-            inventoryButton = new Button();
-            stockButton = new Button();
-            addprodButton = new Button();
-            hiLabel = new Label();
-            panel2 = new Panel();
-            logoutButton = new Button();
-            settingsPictureBox = new PictureBox();
-            accountPictureBox = new PictureBox();
-            locationPictureBox = new PictureBox();
-            homePictureBox = new PictureBox();
-            settingsLabel = new Label();
-            logoutLabel = new Label();
-            accountLabel = new Label();
-            locationLabel = new Label();
-            homeLabel = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)notificationPictureBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)profilePictureBox).BeginInit();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)settingsPictureBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)accountPictureBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)locationPictureBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)homePictureBox).BeginInit();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.homepageLabel = new System.Windows.Forms.Label();
+            this.notificationPictureBox = new System.Windows.Forms.PictureBox();
+            this.profilePictureBox = new System.Windows.Forms.PictureBox();
+            this.inventoryButton = new System.Windows.Forms.Button();
+            this.stockButton = new System.Windows.Forms.Button();
+            this.addprodButton = new System.Windows.Forms.Button();
+            this.hiLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.logoutButton = new System.Windows.Forms.Button();
+            this.settingsPictureBox = new System.Windows.Forms.PictureBox();
+            this.accountPictureBox = new System.Windows.Forms.PictureBox();
+            this.locationPictureBox = new System.Windows.Forms.PictureBox();
+            this.homePictureBox = new System.Windows.Forms.PictureBox();
+            this.settingsLabel = new System.Windows.Forms.Label();
+            this.logoutLabel = new System.Windows.Forms.Label();
+            this.accountLabel = new System.Windows.Forms.Label();
+            this.locationLabel = new System.Windows.Forms.Label();
+            this.homeLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.notificationPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingsPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homePictureBox)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.BackColor = Color.Transparent;
-            panel1.BackgroundImageLayout = ImageLayout.Zoom;
-            panel1.Controls.Add(homepageLabel);
-            panel1.Controls.Add(notificationPictureBox);
-            panel1.Controls.Add(profilePictureBox);
-            panel1.Controls.Add(inventoryButton);
-            panel1.Controls.Add(stockButton);
-            panel1.Controls.Add(addprodButton);
-            panel1.Controls.Add(hiLabel);
-            panel1.Location = new Point(189, 22);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1295, 650);
-            panel1.TabIndex = 0;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.homepageLabel);
+            this.panel1.Controls.Add(this.notificationPictureBox);
+            this.panel1.Controls.Add(this.profilePictureBox);
+            this.panel1.Controls.Add(this.inventoryButton);
+            this.panel1.Controls.Add(this.stockButton);
+            this.panel1.Controls.Add(this.addprodButton);
+            this.panel1.Controls.Add(this.hiLabel);
+            this.panel1.Location = new System.Drawing.Point(216, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1480, 867);
+            this.panel1.TabIndex = 0;
             // 
             // homepageLabel
             // 
-            homepageLabel.AutoSize = true;
-            homepageLabel.BackColor = Color.Transparent;
-            homepageLabel.Font = new Font("Arial Black", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            homepageLabel.ForeColor = Color.LightGray;
-            homepageLabel.Location = new Point(58, 50);
-            homepageLabel.Name = "homepageLabel";
-            homepageLabel.Size = new Size(193, 42);
-            homepageLabel.TabIndex = 7;
-            homepageLabel.Text = "Homepage";
+            this.homepageLabel.AutoSize = true;
+            this.homepageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.homepageLabel.Font = new System.Drawing.Font("Arial Black", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.homepageLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.homepageLabel.Location = new System.Drawing.Point(66, 67);
+            this.homepageLabel.Name = "homepageLabel";
+            this.homepageLabel.Size = new System.Drawing.Size(241, 52);
+            this.homepageLabel.TabIndex = 7;
+            this.homepageLabel.Text = "Homepage";
             // 
             // notificationPictureBox
             // 
-            notificationPictureBox.BackgroundImage = Properties.Resources.noification;
-            notificationPictureBox.BackgroundImageLayout = ImageLayout.Zoom;
-            notificationPictureBox.Location = new Point(1310, 0);
-            notificationPictureBox.Margin = new Padding(3, 2, 3, 2);
-            notificationPictureBox.Name = "notificationPictureBox";
-            notificationPictureBox.Size = new Size(44, 34);
-            notificationPictureBox.TabIndex = 6;
-            notificationPictureBox.TabStop = false;
+            this.notificationPictureBox.BackgroundImage = global::shopManager.Properties.Resources.noification;
+            this.notificationPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.notificationPictureBox.Location = new System.Drawing.Point(1497, 0);
+            this.notificationPictureBox.Name = "notificationPictureBox";
+            this.notificationPictureBox.Size = new System.Drawing.Size(50, 45);
+            this.notificationPictureBox.TabIndex = 6;
+            this.notificationPictureBox.TabStop = false;
             // 
             // profilePictureBox
             // 
-            profilePictureBox.BackgroundImage = Properties.Resources.profile;
-            profilePictureBox.BackgroundImageLayout = ImageLayout.Zoom;
-            profilePictureBox.Location = new Point(1360, 0);
-            profilePictureBox.Margin = new Padding(3, 2, 3, 2);
-            profilePictureBox.Name = "profilePictureBox";
-            profilePictureBox.Size = new Size(45, 34);
-            profilePictureBox.TabIndex = 5;
-            profilePictureBox.TabStop = false;
+            this.profilePictureBox.BackgroundImage = global::shopManager.Properties.Resources.profile;
+            this.profilePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.profilePictureBox.Location = new System.Drawing.Point(1554, 0);
+            this.profilePictureBox.Name = "profilePictureBox";
+            this.profilePictureBox.Size = new System.Drawing.Size(51, 45);
+            this.profilePictureBox.TabIndex = 5;
+            this.profilePictureBox.TabStop = false;
             // 
             // inventoryButton
             // 
-            inventoryButton.BackColor = Color.FromArgb(15, 16, 43);
-            inventoryButton.FlatStyle = FlatStyle.Popup;
-            inventoryButton.Font = new Font("Arial Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            inventoryButton.ForeColor = Color.LightGray;
-            inventoryButton.Location = new Point(1003, 175);
-            inventoryButton.Margin = new Padding(3, 2, 3, 2);
-            inventoryButton.Name = "inventoryButton";
-            inventoryButton.Size = new Size(396, 89);
-            inventoryButton.TabIndex = 4;
-            inventoryButton.Text = "Stock";
-            inventoryButton.UseVisualStyleBackColor = false;
-            inventoryButton.Click += inventoryButton_Click;
+            this.inventoryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(43)))));
+            this.inventoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inventoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.inventoryButton.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.inventoryButton.ForeColor = System.Drawing.Color.LightGray;
+            this.inventoryButton.Location = new System.Drawing.Point(1146, 233);
+            this.inventoryButton.Name = "inventoryButton";
+            this.inventoryButton.Size = new System.Drawing.Size(453, 119);
+            this.inventoryButton.TabIndex = 4;
+            this.inventoryButton.Text = "Stock";
+            this.inventoryButton.UseVisualStyleBackColor = false;
+            this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
             // 
             // stockButton
             // 
-            stockButton.BackColor = Color.FromArgb(15, 16, 43);
-            stockButton.FlatStyle = FlatStyle.Popup;
-            stockButton.Font = new Font("Arial Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            stockButton.ForeColor = Color.LightGray;
-            stockButton.Location = new Point(527, 175);
-            stockButton.Margin = new Padding(3, 2, 3, 2);
-            stockButton.Name = "stockButton";
-            stockButton.Size = new Size(402, 89);
-            stockButton.TabIndex = 3;
-            stockButton.Text = "Shopping Cart";
-            stockButton.UseVisualStyleBackColor = false;
-            stockButton.Click += stockButton_Click;
+            this.stockButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(43)))));
+            this.stockButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stockButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stockButton.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.stockButton.ForeColor = System.Drawing.Color.LightGray;
+            this.stockButton.Location = new System.Drawing.Point(602, 233);
+            this.stockButton.Name = "stockButton";
+            this.stockButton.Size = new System.Drawing.Size(459, 119);
+            this.stockButton.TabIndex = 3;
+            this.stockButton.Text = "Shopping Cart";
+            this.stockButton.UseVisualStyleBackColor = false;
+            this.stockButton.Click += new System.EventHandler(this.stockButton_Click);
             // 
             // addprodButton
             // 
-            addprodButton.BackColor = Color.FromArgb(15, 16, 43);
-            addprodButton.FlatStyle = FlatStyle.Popup;
-            addprodButton.Font = new Font("Arial Black", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            addprodButton.ForeColor = Color.LightGray;
-            addprodButton.Location = new Point(69, 175);
-            addprodButton.Margin = new Padding(3, 2, 3, 2);
-            addprodButton.Name = "addprodButton";
-            addprodButton.Size = new Size(392, 89);
-            addprodButton.TabIndex = 2;
-            addprodButton.Text = "Ubgrade Stock";
-            addprodButton.UseVisualStyleBackColor = false;
-            addprodButton.Click += addprodButton_Click;
+            this.addprodButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(43)))));
+            this.addprodButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addprodButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addprodButton.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addprodButton.ForeColor = System.Drawing.Color.LightGray;
+            this.addprodButton.Location = new System.Drawing.Point(79, 233);
+            this.addprodButton.Name = "addprodButton";
+            this.addprodButton.Size = new System.Drawing.Size(448, 119);
+            this.addprodButton.TabIndex = 2;
+            this.addprodButton.Text = "Add Product";
+            this.addprodButton.UseVisualStyleBackColor = false;
+            this.addprodButton.Click += new System.EventHandler(this.addprodButton_Click);
             // 
             // hiLabel
             // 
-            hiLabel.AutoSize = true;
-            hiLabel.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            hiLabel.ForeColor = Color.LightGray;
-            hiLabel.Location = new Point(97, 94);
-            hiLabel.Name = "hiLabel";
-            hiLabel.Size = new Size(101, 23);
-            hiLabel.TabIndex = 1;
-            hiLabel.Text = "Hi, Employee";
+            this.hiLabel.AutoSize = true;
+            this.hiLabel.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.hiLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.hiLabel.Location = new System.Drawing.Point(111, 125);
+            this.hiLabel.Name = "hiLabel";
+            this.hiLabel.Size = new System.Drawing.Size(122, 27);
+            this.hiLabel.TabIndex = 1;
+            this.hiLabel.Text = "Hi, Employee";
             // 
             // panel2
             // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(logoutButton);
-            panel2.Controls.Add(settingsPictureBox);
-            panel2.Controls.Add(accountPictureBox);
-            panel2.Controls.Add(locationPictureBox);
-            panel2.Controls.Add(homePictureBox);
-            panel2.Controls.Add(settingsLabel);
-            panel2.Controls.Add(logoutLabel);
-            panel2.Controls.Add(accountLabel);
-            panel2.Controls.Add(locationLabel);
-            panel2.Controls.Add(homeLabel);
-            panel2.Location = new Point(10, 22);
-            panel2.Margin = new Padding(3, 2, 3, 2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(158, 650);
-            panel2.TabIndex = 5;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.logoutButton);
+            this.panel2.Controls.Add(this.settingsPictureBox);
+            this.panel2.Controls.Add(this.accountPictureBox);
+            this.panel2.Controls.Add(this.locationPictureBox);
+            this.panel2.Controls.Add(this.homePictureBox);
+            this.panel2.Controls.Add(this.settingsLabel);
+            this.panel2.Controls.Add(this.logoutLabel);
+            this.panel2.Controls.Add(this.accountLabel);
+            this.panel2.Controls.Add(this.locationLabel);
+            this.panel2.Controls.Add(this.homeLabel);
+            this.panel2.Location = new System.Drawing.Point(11, 29);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(181, 867);
+            this.panel2.TabIndex = 5;
             // 
             // logoutButton
             // 
-            logoutButton.BackgroundImage = Properties.Resources.logout;
-            logoutButton.BackgroundImageLayout = ImageLayout.Zoom;
-            logoutButton.FlatStyle = FlatStyle.Flat;
-            logoutButton.ForeColor = Color.FromArgb(15, 16, 43);
-            logoutButton.Location = new Point(10, 160);
-            logoutButton.Margin = new Padding(3, 2, 3, 2);
-            logoutButton.Name = "logoutButton";
-            logoutButton.Size = new Size(32, 26);
-            logoutButton.TabIndex = 8;
-            logoutButton.UseVisualStyleBackColor = true;
-            logoutButton.Click += logoutButton_Click;
+            this.logoutButton.BackgroundImage = global::shopManager.Properties.Resources.logout;
+            this.logoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(43)))));
+            this.logoutButton.Location = new System.Drawing.Point(11, 213);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(37, 35);
+            this.logoutButton.TabIndex = 8;
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // settingsPictureBox
             // 
-            settingsPictureBox.BackgroundImage = Properties.Resources.settings;
-            settingsPictureBox.BackgroundImageLayout = ImageLayout.Zoom;
-            settingsPictureBox.Location = new Point(10, 599);
-            settingsPictureBox.Margin = new Padding(3, 2, 3, 2);
-            settingsPictureBox.Name = "settingsPictureBox";
-            settingsPictureBox.Size = new Size(34, 34);
-            settingsPictureBox.TabIndex = 5;
-            settingsPictureBox.TabStop = false;
+            this.settingsPictureBox.BackgroundImage = global::shopManager.Properties.Resources.settings;
+            this.settingsPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.settingsPictureBox.Location = new System.Drawing.Point(11, 799);
+            this.settingsPictureBox.Name = "settingsPictureBox";
+            this.settingsPictureBox.Size = new System.Drawing.Size(39, 45);
+            this.settingsPictureBox.TabIndex = 5;
+            this.settingsPictureBox.TabStop = false;
             // 
             // accountPictureBox
             // 
-            accountPictureBox.BackgroundImage = Properties.Resources.profile;
-            accountPictureBox.BackgroundImageLayout = ImageLayout.Zoom;
-            accountPictureBox.Location = new Point(10, 94);
-            accountPictureBox.Margin = new Padding(3, 2, 3, 2);
-            accountPictureBox.Name = "accountPictureBox";
-            accountPictureBox.Size = new Size(30, 20);
-            accountPictureBox.TabIndex = 5;
-            accountPictureBox.TabStop = false;
+            this.accountPictureBox.BackgroundImage = global::shopManager.Properties.Resources.profile;
+            this.accountPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.accountPictureBox.Location = new System.Drawing.Point(11, 125);
+            this.accountPictureBox.Name = "accountPictureBox";
+            this.accountPictureBox.Size = new System.Drawing.Size(34, 27);
+            this.accountPictureBox.TabIndex = 5;
+            this.accountPictureBox.TabStop = false;
             // 
             // locationPictureBox
             // 
-            locationPictureBox.BackgroundImage = Properties.Resources.locations;
-            locationPictureBox.BackgroundImageLayout = ImageLayout.Zoom;
-            locationPictureBox.Location = new Point(8, 68);
-            locationPictureBox.Margin = new Padding(3, 2, 3, 2);
-            locationPictureBox.Name = "locationPictureBox";
-            locationPictureBox.Size = new Size(36, 20);
-            locationPictureBox.TabIndex = 5;
-            locationPictureBox.TabStop = false;
+            this.locationPictureBox.BackgroundImage = global::shopManager.Properties.Resources.locations;
+            this.locationPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.locationPictureBox.Location = new System.Drawing.Point(9, 91);
+            this.locationPictureBox.Name = "locationPictureBox";
+            this.locationPictureBox.Size = new System.Drawing.Size(41, 27);
+            this.locationPictureBox.TabIndex = 5;
+            this.locationPictureBox.TabStop = false;
             // 
             // homePictureBox
             // 
-            homePictureBox.BackColor = Color.Transparent;
-            homePictureBox.BackgroundImage = (Image)resources.GetObject("homePictureBox.BackgroundImage");
-            homePictureBox.BackgroundImageLayout = ImageLayout.Zoom;
-            homePictureBox.Location = new Point(10, 43);
-            homePictureBox.Margin = new Padding(3, 2, 3, 2);
-            homePictureBox.Name = "homePictureBox";
-            homePictureBox.Size = new Size(32, 18);
-            homePictureBox.TabIndex = 5;
-            homePictureBox.TabStop = false;
+            this.homePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.homePictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePictureBox.BackgroundImage")));
+            this.homePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.homePictureBox.Location = new System.Drawing.Point(11, 57);
+            this.homePictureBox.Name = "homePictureBox";
+            this.homePictureBox.Size = new System.Drawing.Size(37, 24);
+            this.homePictureBox.TabIndex = 5;
+            this.homePictureBox.TabStop = false;
             // 
             // settingsLabel
             // 
-            settingsLabel.AutoSize = true;
-            settingsLabel.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            settingsLabel.ForeColor = Color.LightGray;
-            settingsLabel.Location = new Point(45, 609);
-            settingsLabel.Name = "settingsLabel";
-            settingsLabel.Size = new Size(57, 20);
-            settingsLabel.TabIndex = 4;
-            settingsLabel.Text = "Settings";
+            this.settingsLabel.AutoSize = true;
+            this.settingsLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.settingsLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.settingsLabel.Location = new System.Drawing.Point(51, 812);
+            this.settingsLabel.Name = "settingsLabel";
+            this.settingsLabel.Size = new System.Drawing.Size(69, 24);
+            this.settingsLabel.TabIndex = 4;
+            this.settingsLabel.Text = "Settings";
             // 
             // logoutLabel
             // 
-            logoutLabel.AutoSize = true;
-            logoutLabel.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            logoutLabel.ForeColor = Color.LightGray;
-            logoutLabel.Location = new Point(45, 163);
-            logoutLabel.Name = "logoutLabel";
-            logoutLabel.Size = new Size(56, 20);
-            logoutLabel.TabIndex = 3;
-            logoutLabel.Text = "Log Out";
+            this.logoutLabel.AutoSize = true;
+            this.logoutLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logoutLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.logoutLabel.Location = new System.Drawing.Point(51, 217);
+            this.logoutLabel.Name = "logoutLabel";
+            this.logoutLabel.Size = new System.Drawing.Size(69, 24);
+            this.logoutLabel.TabIndex = 3;
+            this.logoutLabel.Text = "Log Out";
             // 
             // accountLabel
             // 
-            accountLabel.AutoSize = true;
-            accountLabel.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            accountLabel.ForeColor = Color.LightGray;
-            accountLabel.Location = new Point(45, 97);
-            accountLabel.Name = "accountLabel";
-            accountLabel.Size = new Size(57, 20);
-            accountLabel.TabIndex = 2;
-            accountLabel.Text = "Account";
+            this.accountLabel.AutoSize = true;
+            this.accountLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.accountLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.accountLabel.Location = new System.Drawing.Point(51, 129);
+            this.accountLabel.Name = "accountLabel";
+            this.accountLabel.Size = new System.Drawing.Size(69, 24);
+            this.accountLabel.TabIndex = 2;
+            this.accountLabel.Text = "Account";
             // 
             // locationLabel
             // 
-            locationLabel.AutoSize = true;
-            locationLabel.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            locationLabel.ForeColor = Color.LightGray;
-            locationLabel.Location = new Point(45, 70);
-            locationLabel.Name = "locationLabel";
-            locationLabel.Size = new Size(66, 20);
-            locationLabel.TabIndex = 1;
-            locationLabel.Text = "Locations";
+            this.locationLabel.AutoSize = true;
+            this.locationLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.locationLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.locationLabel.Location = new System.Drawing.Point(51, 93);
+            this.locationLabel.Name = "locationLabel";
+            this.locationLabel.Size = new System.Drawing.Size(79, 24);
+            this.locationLabel.TabIndex = 1;
+            this.locationLabel.Text = "Locations";
             // 
             // homeLabel
             // 
-            homeLabel.AutoSize = true;
-            homeLabel.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            homeLabel.ForeColor = Color.LightGray;
-            homeLabel.Location = new Point(45, 43);
-            homeLabel.Name = "homeLabel";
-            homeLabel.Size = new Size(76, 20);
-            homeLabel.TabIndex = 0;
-            homeLabel.Text = "Homepage";
+            this.homeLabel.AutoSize = true;
+            this.homeLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.homeLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.homeLabel.Location = new System.Drawing.Point(51, 57);
+            this.homeLabel.Name = "homeLabel";
+            this.homeLabel.Size = new System.Drawing.Size(91, 24);
+            this.homeLabel.TabIndex = 0;
+            this.homeLabel.Text = "Homepage";
             // 
             // HomepageForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Screenshot__54_;
-            ClientSize = new Size(1264, 661);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "HomepageForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "HomepageForm";
-            WindowState = FormWindowState.Maximized;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)notificationPictureBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)profilePictureBox).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)settingsPictureBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)accountPictureBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)locationPictureBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)homePictureBox).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::shopManager.Properties.Resources.Screenshot__54_;
+            this.ClientSize = new System.Drawing.Size(1445, 881);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "HomepageForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HomepageForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.notificationPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.settingsPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homePictureBox)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
