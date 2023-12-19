@@ -27,7 +27,7 @@ namespace shopManager
         }
         public void addOrder(string name, int quantity, double price)
         {
-            dataGridView1.Rows.Add(name, quantity, price);
+            dataGridView1.Rows.Add(name, quantity, price + "$");
         }
 
         public StockForm()
@@ -38,18 +38,20 @@ namespace shopManager
             this.FormClosed += (sender, e) => Application.Exit();
         }
 
-        private void StockForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkOutBtn_Click(object sender, EventArgs e)
         {
-           checkForm f = new checkForm();
-            this.Hide();
-            f.Show();
-            
-            dataGridView1.Rows.Clear();
+            if (dataGridView1.Rows.Count != 0)
+            {
+                CheckForm check = new CheckForm();
+                this.Hide();
+                check.Show();
+
+                dataGridView1.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Please add some items first.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void addItemBtn_Click(object sender, EventArgs e)
@@ -63,11 +65,6 @@ namespace shopManager
             HomepageForm home = new HomepageForm();
             this.Hide();
             home.Show();
-        }
-
-        private void StockForm_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

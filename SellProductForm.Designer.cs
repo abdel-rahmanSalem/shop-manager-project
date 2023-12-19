@@ -28,161 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.quantityLabel = new System.Windows.Forms.Label();
-            this.quantityNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Calculatetotalprice = new System.Windows.Forms.TextBox();
-            this.sellButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.sellIdTextBox = new System.Windows.Forms.TextBox();
-            this.sellIdLapel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.quantityNumericUpDown)).BeginInit();
-            this.SuspendLayout();
+            quantityLabel = new Label();
+            quantityNumericUpDown = new NumericUpDown();
+            label1 = new Label();
+            Calculatetotalprice = new TextBox();
+            sellButton = new Button();
+            cancelButton = new Button();
+            sellIdTextBox = new TextBox();
+            sellIdLapel = new Label();
+            ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).BeginInit();
+            SuspendLayout();
             // 
             // quantityLabel
             // 
-            this.quantityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.quantityLabel.AutoSize = true;
-            this.quantityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.quantityLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.quantityLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.quantityLabel.Location = new System.Drawing.Point(39, 177);
-            this.quantityLabel.Name = "quantityLabel";
-            this.quantityLabel.Size = new System.Drawing.Size(126, 35);
-            this.quantityLabel.TabIndex = 23;
-            this.quantityLabel.Text = "Quantity";
+            quantityLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            quantityLabel.AutoSize = true;
+            quantityLabel.BackColor = Color.Transparent;
+            quantityLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            quantityLabel.ForeColor = Color.WhiteSmoke;
+            quantityLabel.Location = new Point(34, 133);
+            quantityLabel.Name = "quantityLabel";
+            quantityLabel.Size = new Size(103, 27);
+            quantityLabel.TabIndex = 23;
+            quantityLabel.Text = "Quantity";
             // 
             // quantityNumericUpDown
             // 
-            this.quantityNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.quantityNumericUpDown.BackColor = System.Drawing.Color.LightGray;
-            this.quantityNumericUpDown.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.quantityNumericUpDown.ForeColor = System.Drawing.Color.Black;
-            this.quantityNumericUpDown.Location = new System.Drawing.Point(224, 183);
-            this.quantityNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.quantityNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.quantityNumericUpDown.Name = "quantityNumericUpDown";
-            this.quantityNumericUpDown.ReadOnly = true;
-            this.quantityNumericUpDown.Size = new System.Drawing.Size(286, 35);
-            this.quantityNumericUpDown.TabIndex = 1;
-            this.quantityNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.quantityNumericUpDown.ValueChanged += new System.EventHandler(this.quantityNumericUpDown_ValueChanged_1);
+            quantityNumericUpDown.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            quantityNumericUpDown.BackColor = Color.LightGray;
+            quantityNumericUpDown.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            quantityNumericUpDown.ForeColor = Color.Black;
+            quantityNumericUpDown.Location = new Point(196, 137);
+            quantityNumericUpDown.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            quantityNumericUpDown.Name = "quantityNumericUpDown";
+            quantityNumericUpDown.ReadOnly = true;
+            quantityNumericUpDown.Size = new Size(250, 29);
+            quantityNumericUpDown.TabIndex = 1;
+            quantityNumericUpDown.TextAlign = HorizontalAlignment.Center;
+            quantityNumericUpDown.ValueChanged += quantityNumericUpDown_ValueChanged_1;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(43, 260);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 35);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "TotalPrice: ";
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(38, 195);
+            label1.Name = "label1";
+            label1.Size = new Size(130, 27);
+            label1.TabIndex = 25;
+            label1.Text = "TotalPrice: ";
             // 
             // Calculatetotalprice
             // 
-            this.Calculatetotalprice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Calculatetotalprice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(60)))));
-            this.Calculatetotalprice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Calculatetotalprice.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Calculatetotalprice.ForeColor = System.Drawing.Color.LightGray;
-            this.Calculatetotalprice.Location = new System.Drawing.Point(224, 260);
-            this.Calculatetotalprice.Name = "Calculatetotalprice";
-            this.Calculatetotalprice.ReadOnly = true;
-            this.Calculatetotalprice.Size = new System.Drawing.Size(291, 36);
-            this.Calculatetotalprice.TabIndex = 100;
-            this.Calculatetotalprice.Visible = false;
+            Calculatetotalprice.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            Calculatetotalprice.BackColor = Color.FromArgb(15, 16, 43);
+            Calculatetotalprice.BorderStyle = BorderStyle.None;
+            Calculatetotalprice.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            Calculatetotalprice.ForeColor = Color.LightGray;
+            Calculatetotalprice.Location = new Point(196, 195);
+            Calculatetotalprice.Margin = new Padding(3, 2, 3, 2);
+            Calculatetotalprice.Name = "Calculatetotalprice";
+            Calculatetotalprice.ReadOnly = true;
+            Calculatetotalprice.Size = new Size(255, 29);
+            Calculatetotalprice.TabIndex = 100;
+            Calculatetotalprice.Visible = false;
             // 
             // sellButton
             // 
-            this.sellButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sellButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.sellButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sellButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.sellButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.sellButton.ForeColor = System.Drawing.Color.White;
-            this.sellButton.Location = new System.Drawing.Point(30, 407);
-            this.sellButton.Name = "sellButton";
-            this.sellButton.Size = new System.Drawing.Size(246, 49);
-            this.sellButton.TabIndex = 2;
-            this.sellButton.Text = "Sell";
-            this.sellButton.UseVisualStyleBackColor = false;
-            this.sellButton.Click += new System.EventHandler(this.sellButton_Click);
+            sellButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            sellButton.BackColor = Color.FromArgb(114, 0, 0);
+            sellButton.Cursor = Cursors.Hand;
+            sellButton.FlatStyle = FlatStyle.Popup;
+            sellButton.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            sellButton.ForeColor = Color.White;
+            sellButton.Location = new Point(26, 305);
+            sellButton.Margin = new Padding(3, 2, 3, 2);
+            sellButton.Name = "sellButton";
+            sellButton.Size = new Size(192, 37);
+            sellButton.TabIndex = 2;
+            sellButton.Text = "Sell";
+            sellButton.UseVisualStyleBackColor = false;
+            sellButton.Click += sellButton_Click;
             // 
             // cancelButton
             // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.BackColor = System.Drawing.Color.Transparent;
-            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cancelButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(309, 407);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(219, 49);
-            this.cancelButton.TabIndex = 3;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            cancelButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cancelButton.BackColor = Color.Transparent;
+            cancelButton.Cursor = Cursors.Hand;
+            cancelButton.FlatStyle = FlatStyle.Popup;
+            cancelButton.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            cancelButton.ForeColor = Color.White;
+            cancelButton.Location = new Point(270, 305);
+            cancelButton.Margin = new Padding(3, 2, 3, 2);
+            cancelButton.Name = "cancelButton";
+            cancelButton.Size = new Size(192, 37);
+            cancelButton.TabIndex = 3;
+            cancelButton.Text = "Cancel";
+            cancelButton.UseVisualStyleBackColor = false;
+            cancelButton.Click += cancelButton_Click;
             // 
             // sellIdTextBox
             // 
-            this.sellIdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.sellIdTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(60)))));
-            this.sellIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sellIdTextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sellIdTextBox.ForeColor = System.Drawing.Color.LightGray;
-            this.sellIdTextBox.Location = new System.Drawing.Point(224, 97);
-            this.sellIdTextBox.Name = "sellIdTextBox";
-            this.sellIdTextBox.Size = new System.Drawing.Size(291, 36);
-            this.sellIdTextBox.TabIndex = 0;
-            this.sellIdTextBox.Visible = false;
-            this.sellIdTextBox.TextChanged += new System.EventHandler(this.sellIdTextBox_TextChanged_1);
+            sellIdTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            sellIdTextBox.BackColor = Color.FromArgb(31, 32, 60);
+            sellIdTextBox.BorderStyle = BorderStyle.None;
+            sellIdTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            sellIdTextBox.ForeColor = Color.LightGray;
+            sellIdTextBox.Location = new Point(196, 73);
+            sellIdTextBox.Margin = new Padding(3, 2, 3, 2);
+            sellIdTextBox.Name = "sellIdTextBox";
+            sellIdTextBox.Size = new Size(255, 29);
+            sellIdTextBox.TabIndex = 0;
+            sellIdTextBox.Visible = false;
+            sellIdTextBox.TextChanged += sellIdTextBox_TextChanged_1;
             // 
             // sellIdLapel
             // 
-            this.sellIdLapel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.sellIdLapel.AutoSize = true;
-            this.sellIdLapel.BackColor = System.Drawing.Color.Transparent;
-            this.sellIdLapel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sellIdLapel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.sellIdLapel.Location = new System.Drawing.Point(43, 97);
-            this.sellIdLapel.Name = "sellIdLapel";
-            this.sellIdLapel.Size = new System.Drawing.Size(155, 35);
-            this.sellIdLapel.TabIndex = 29;
-            this.sellIdLapel.Text = "Product ID";
-            this.sellIdLapel.Visible = false;
+            sellIdLapel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            sellIdLapel.AutoSize = true;
+            sellIdLapel.BackColor = Color.Transparent;
+            sellIdLapel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            sellIdLapel.ForeColor = Color.WhiteSmoke;
+            sellIdLapel.Location = new Point(38, 73);
+            sellIdLapel.Name = "sellIdLapel";
+            sellIdLapel.Size = new Size(126, 27);
+            sellIdLapel.TabIndex = 29;
+            sellIdLapel.Text = "Product ID";
+            sellIdLapel.Visible = false;
             // 
             // SellProductForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(32)))));
-            this.BackgroundImage = global::shopManager.Properties.Resources.Screenshot__54_;
-            this.ClientSize = new System.Drawing.Size(565, 533);
-            this.Controls.Add(this.sellIdTextBox);
-            this.Controls.Add(this.sellIdLapel);
-            this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.sellButton);
-            this.Controls.Add(this.Calculatetotalprice);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.quantityNumericUpDown);
-            this.Controls.Add(this.quantityLabel);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SellProductForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SellProductForm";
-            ((System.ComponentModel.ISupportInitialize)(this.quantityNumericUpDown)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(19, 22, 32);
+            BackgroundImage = Properties.Resources.Screenshot__54_;
+            ClientSize = new Size(494, 400);
+            Controls.Add(sellIdTextBox);
+            Controls.Add(sellIdLapel);
+            Controls.Add(cancelButton);
+            Controls.Add(sellButton);
+            Controls.Add(Calculatetotalprice);
+            Controls.Add(label1);
+            Controls.Add(quantityNumericUpDown);
+            Controls.Add(quantityLabel);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "SellProductForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "SellProductForm";
+            ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

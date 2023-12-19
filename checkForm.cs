@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace shopManager
 {
-    public partial class checkForm : Form
+    public partial class CheckForm : Form
     {
-        public checkForm()
+        public CheckForm()
         {
             InitializeComponent();
 

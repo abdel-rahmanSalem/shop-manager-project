@@ -21,9 +21,7 @@ namespace shopManager
         {
             InitializeComponent();
             if (flag == 'S')
-            {
                 iD = id;
-            }
             else
             {
                 sellIdLapel.Visible = true;
@@ -31,27 +29,26 @@ namespace shopManager
             }
         }
 
-        private void SellProductForm_Load(object sender, EventArgs e)
-        {
-        }
-
         private void sellButton_Click(object sender, EventArgs e)
         {
+
             InventoryForm.dataList.Update(int.Parse(quantityNumericUpDown.Text), iD);
-            if (quantityNumericUpDown.Value <= 0)
+            if (InventoryForm.dataList.GetSpecificProductById(iD) == null)
             {
-                MessageBox.Show("Please enter a valid quantity more than zero.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid product ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else if (quantityNumericUpDown.Value > 0 && InventoryForm.dataList.GetSpecificProductById(iD) != null)
+            else
             {
-                double totalprice = (int)quantityNumericUpDown.Value * InventoryForm.dataList.GetSpecificProductById(iD).TotalPrice();
-                stockForm.addOrder(InventoryForm.dataList.GetSpecificProductById(iD).Name, int.Parse(quantityNumericUpDown.Text), totalprice);
+                double totalPrice = (int)quantityNumericUpDown.Value * InventoryForm.dataList.GetSpecificProductById(iD).TotalPrice();
+                stockForm.addOrder(InventoryForm.dataList.GetSpecificProductById(iD).Name, int.Parse(quantityNumericUpDown.Text), totalPrice);
             }
 
             if (InventoryForm.dataList.GetSpecificProductById(iD).Quantity == 0)
             {
                 quantityNumericUpDown.Enabled = false;
                 InventoryForm.dataList.RemovedSpesProduct(iD);
+                this.Close();
             }
             quantityNumericUpDown.Value = 0;
             inventoryForm.LoadProductsToDataGridView();

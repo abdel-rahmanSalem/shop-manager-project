@@ -48,7 +48,7 @@ namespace shopManager
 
             for (int i = 0; i < products.Count(); i++)
             {
-                dataGridView.Rows.Add(products[i].Name, products[i].ID, products[i].Category, products[i].Quantity, products[i].TotalPrice(), "Edit", "Delete");
+                dataGridView.Rows.Add(products[i].Name, products[i].ID, products[i].Category, products[i].Quantity, products[i].TotalPrice() + "$", "Edit", "Delete");
 
                 if (products[i].Category == "Phones")
                 {
@@ -97,7 +97,7 @@ namespace shopManager
             dataGridView.Rows.Clear();
 
             // Update UI with the retrieved product information
-            dataGridView.Rows.Add(product.Name, product.ID, product.Category, product.Quantity, product.TotalPrice(), "Edit", "Delete");
+            dataGridView.Rows.Add(product.Name, product.ID, product.Category, product.Quantity, product.TotalPrice() + "$", "Edit", "Delete");
         }
 
         private void cancelSearchButton_Click(object sender, EventArgs e)

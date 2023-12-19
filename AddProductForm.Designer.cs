@@ -28,231 +28,227 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.quantityNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.costLabel = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.profitTextBox = new System.Windows.Forms.TextBox();
-            this.profitLabel = new System.Windows.Forms.Label();
-            this.categoryLabel = new System.Windows.Forms.Label();
-            this.costTextBox = new System.Windows.Forms.TextBox();
-            this.categoryComboBox = new System.Windows.Forms.ComboBox();
-            this.quantityLabel = new System.Windows.Forms.Label();
-            this.addButton = new System.Windows.Forms.Button();
-            this.addProdLapel = new System.Windows.Forms.Label();
-            this.cancelButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.quantityNumericUpDown)).BeginInit();
-            this.SuspendLayout();
+            quantityNumericUpDown = new NumericUpDown();
+            nameLabel = new Label();
+            costLabel = new Label();
+            nameTextBox = new TextBox();
+            profitTextBox = new TextBox();
+            profitLabel = new Label();
+            categoryLabel = new Label();
+            costTextBox = new TextBox();
+            categoryComboBox = new ComboBox();
+            quantityLabel = new Label();
+            addButton = new Button();
+            addProdLapel = new Label();
+            cancelButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).BeginInit();
+            SuspendLayout();
             // 
             // quantityNumericUpDown
             // 
-            this.quantityNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.quantityNumericUpDown.BackColor = System.Drawing.Color.LightGray;
-            this.quantityNumericUpDown.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.quantityNumericUpDown.ForeColor = System.Drawing.Color.Black;
-            this.quantityNumericUpDown.Location = new System.Drawing.Point(307, 488);
-            this.quantityNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.quantityNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.quantityNumericUpDown.Name = "quantityNumericUpDown";
-            this.quantityNumericUpDown.Size = new System.Drawing.Size(286, 35);
-            this.quantityNumericUpDown.TabIndex = 3;
-            this.quantityNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            quantityNumericUpDown.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            quantityNumericUpDown.BackColor = Color.LightGray;
+            quantityNumericUpDown.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            quantityNumericUpDown.ForeColor = Color.Black;
+            quantityNumericUpDown.Location = new Point(269, 366);
+            quantityNumericUpDown.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            quantityNumericUpDown.Name = "quantityNumericUpDown";
+            quantityNumericUpDown.Size = new Size(250, 29);
+            quantityNumericUpDown.TabIndex = 3;
+            quantityNumericUpDown.TextAlign = HorizontalAlignment.Center;
             // 
             // nameLabel
             // 
-            this.nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nameLabel.Location = new System.Drawing.Point(63, 309);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(94, 35);
-            this.nameLabel.TabIndex = 20;
-            this.nameLabel.Text = "Name";
-            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            nameLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            nameLabel.AutoSize = true;
+            nameLabel.BackColor = Color.Transparent;
+            nameLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            nameLabel.ForeColor = Color.WhiteSmoke;
+            nameLabel.Location = new Point(55, 232);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(75, 27);
+            nameLabel.TabIndex = 20;
+            nameLabel.Text = "Name";
+            nameLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // costLabel
             // 
-            this.costLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.costLabel.BackColor = System.Drawing.Color.Transparent;
-            this.costLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.costLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.costLabel.Location = new System.Drawing.Point(63, 385);
-            this.costLabel.Name = "costLabel";
-            this.costLabel.Size = new System.Drawing.Size(86, 40);
-            this.costLabel.TabIndex = 23;
-            this.costLabel.Text = "Cost";
-            this.costLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            costLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            costLabel.BackColor = Color.Transparent;
+            costLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            costLabel.ForeColor = Color.WhiteSmoke;
+            costLabel.Location = new Point(55, 289);
+            costLabel.Name = "costLabel";
+            costLabel.Size = new Size(75, 30);
+            costLabel.TabIndex = 23;
+            costLabel.Text = "Cost";
+            costLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
-            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameTextBox.ForeColor = System.Drawing.Color.White;
-            this.nameTextBox.Location = new System.Drawing.Point(169, 309);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(424, 36);
-            this.nameTextBox.TabIndex = 0;
+            nameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            nameTextBox.BackColor = Color.FromArgb(31, 32, 60);
+            nameTextBox.BorderStyle = BorderStyle.None;
+            nameTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            nameTextBox.ForeColor = Color.White;
+            nameTextBox.Location = new Point(148, 232);
+            nameTextBox.Margin = new Padding(3, 2, 3, 2);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.Size = new Size(371, 29);
+            nameTextBox.TabIndex = 0;
             // 
             // profitTextBox
             // 
-            this.profitTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.profitTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
-            this.profitTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.profitTextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.profitTextBox.ForeColor = System.Drawing.Color.White;
-            this.profitTextBox.Location = new System.Drawing.Point(456, 384);
-            this.profitTextBox.Name = "profitTextBox";
-            this.profitTextBox.Size = new System.Drawing.Size(137, 36);
-            this.profitTextBox.TabIndex = 2;
+            profitTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            profitTextBox.BackColor = Color.FromArgb(31, 32, 60);
+            profitTextBox.BorderStyle = BorderStyle.None;
+            profitTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            profitTextBox.ForeColor = Color.White;
+            profitTextBox.Location = new Point(399, 288);
+            profitTextBox.Margin = new Padding(3, 2, 3, 2);
+            profitTextBox.Name = "profitTextBox";
+            profitTextBox.Size = new Size(120, 29);
+            profitTextBox.TabIndex = 2;
             // 
             // profitLabel
             // 
-            this.profitLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.profitLabel.BackColor = System.Drawing.Color.Transparent;
-            this.profitLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.profitLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.profitLabel.Location = new System.Drawing.Point(347, 385);
-            this.profitLabel.Name = "profitLabel";
-            this.profitLabel.Size = new System.Drawing.Size(87, 40);
-            this.profitLabel.TabIndex = 25;
-            this.profitLabel.Text = "Profit";
+            profitLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            profitLabel.BackColor = Color.Transparent;
+            profitLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            profitLabel.ForeColor = Color.WhiteSmoke;
+            profitLabel.Location = new Point(304, 289);
+            profitLabel.Name = "profitLabel";
+            profitLabel.Size = new Size(76, 30);
+            profitLabel.TabIndex = 25;
+            profitLabel.Text = "Profit";
             // 
             // categoryLabel
             // 
-            this.categoryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.categoryLabel.AutoSize = true;
-            this.categoryLabel.BackColor = System.Drawing.Color.Transparent;
-            this.categoryLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.categoryLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.categoryLabel.Location = new System.Drawing.Point(63, 551);
-            this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(135, 35);
-            this.categoryLabel.TabIndex = 21;
-            this.categoryLabel.Text = "Category";
+            categoryLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            categoryLabel.AutoSize = true;
+            categoryLabel.BackColor = Color.Transparent;
+            categoryLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            categoryLabel.ForeColor = Color.WhiteSmoke;
+            categoryLabel.Location = new Point(55, 413);
+            categoryLabel.Name = "categoryLabel";
+            categoryLabel.Size = new Size(109, 27);
+            categoryLabel.TabIndex = 21;
+            categoryLabel.Text = "Category";
             // 
             // costTextBox
             // 
-            this.costTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
-            this.costTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.costTextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.costTextBox.ForeColor = System.Drawing.Color.White;
-            this.costTextBox.Location = new System.Drawing.Point(171, 385);
-            this.costTextBox.Name = "costTextBox";
-            this.costTextBox.Size = new System.Drawing.Size(137, 36);
-            this.costTextBox.TabIndex = 1;
+            costTextBox.BackColor = Color.FromArgb(31, 32, 60);
+            costTextBox.BorderStyle = BorderStyle.None;
+            costTextBox.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            costTextBox.ForeColor = Color.White;
+            costTextBox.Location = new Point(150, 289);
+            costTextBox.Margin = new Padding(3, 2, 3, 2);
+            costTextBox.Name = "costTextBox";
+            costTextBox.Size = new Size(120, 29);
+            costTextBox.TabIndex = 1;
             // 
             // categoryComboBox
             // 
-            this.categoryComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.categoryComboBox.BackColor = System.Drawing.Color.LightGray;
-            this.categoryComboBox.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.categoryComboBox.ForeColor = System.Drawing.Color.Black;
-            this.categoryComboBox.FormattingEnabled = true;
-            this.categoryComboBox.Items.AddRange(new object[] {
-            "Cameras",
-            "Phones",
-            "Accessories"});
-            this.categoryComboBox.Location = new System.Drawing.Point(307, 551);
-            this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(285, 37);
-            this.categoryComboBox.TabIndex = 4;
+            categoryComboBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            categoryComboBox.BackColor = Color.LightGray;
+            categoryComboBox.Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            categoryComboBox.ForeColor = Color.Black;
+            categoryComboBox.FormattingEnabled = true;
+            categoryComboBox.Items.AddRange(new object[] { "Cameras", "Phones", "Accessories" });
+            categoryComboBox.Location = new Point(269, 413);
+            categoryComboBox.Margin = new Padding(3, 2, 3, 2);
+            categoryComboBox.Name = "categoryComboBox";
+            categoryComboBox.Size = new Size(250, 31);
+            categoryComboBox.TabIndex = 4;
             // 
             // quantityLabel
             // 
-            this.quantityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.quantityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.quantityLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.quantityLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.quantityLabel.Location = new System.Drawing.Point(63, 488);
-            this.quantityLabel.Name = "quantityLabel";
-            this.quantityLabel.Size = new System.Drawing.Size(135, 40);
-            this.quantityLabel.TabIndex = 22;
-            this.quantityLabel.Text = "Quantity";
+            quantityLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            quantityLabel.BackColor = Color.Transparent;
+            quantityLabel.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            quantityLabel.ForeColor = Color.WhiteSmoke;
+            quantityLabel.Location = new Point(55, 366);
+            quantityLabel.Name = "quantityLabel";
+            quantityLabel.Size = new Size(118, 30);
+            quantityLabel.TabIndex = 22;
+            quantityLabel.Text = "Quantity";
             // 
             // addButton
             // 
-            this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addButton.ForeColor = System.Drawing.Color.White;
-            this.addButton.Location = new System.Drawing.Point(63, 696);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(246, 49);
-            this.addButton.TabIndex = 5;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = false;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            addButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            addButton.BackColor = Color.FromArgb(6, 90, 37);
+            addButton.Cursor = Cursors.Hand;
+            addButton.FlatStyle = FlatStyle.Popup;
+            addButton.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            addButton.ForeColor = Color.White;
+            addButton.Location = new Point(55, 522);
+            addButton.Margin = new Padding(3, 2, 3, 2);
+            addButton.Name = "addButton";
+            addButton.Size = new Size(215, 37);
+            addButton.TabIndex = 5;
+            addButton.Text = "Add";
+            addButton.UseVisualStyleBackColor = false;
+            addButton.Click += addButton_Click;
             // 
             // addProdLapel
             // 
-            this.addProdLapel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.addProdLapel.BackColor = System.Drawing.Color.Transparent;
-            this.addProdLapel.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addProdLapel.ForeColor = System.Drawing.Color.White;
-            this.addProdLapel.Location = new System.Drawing.Point(126, 89);
-            this.addProdLapel.Name = "addProdLapel";
-            this.addProdLapel.Size = new System.Drawing.Size(446, 72);
-            this.addProdLapel.TabIndex = 26;
-            this.addProdLapel.Text = "ADD NEW PRODUCT!";
-            this.addProdLapel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            addProdLapel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            addProdLapel.BackColor = Color.Transparent;
+            addProdLapel.Font = new Font("Cooper Black", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            addProdLapel.ForeColor = Color.White;
+            addProdLapel.Location = new Point(110, 67);
+            addProdLapel.Name = "addProdLapel";
+            addProdLapel.Size = new Size(390, 54);
+            addProdLapel.TabIndex = 26;
+            addProdLapel.Text = "ADD NEW PRODUCT!";
+            addProdLapel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // cancelButton
             // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.BackColor = System.Drawing.Color.Transparent;
-            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cancelButton.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(347, 696);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(246, 49);
-            this.cancelButton.TabIndex = 6;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            cancelButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cancelButton.BackColor = Color.Transparent;
+            cancelButton.Cursor = Cursors.Hand;
+            cancelButton.FlatStyle = FlatStyle.Popup;
+            cancelButton.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            cancelButton.ForeColor = Color.White;
+            cancelButton.Location = new Point(304, 522);
+            cancelButton.Margin = new Padding(3, 2, 3, 2);
+            cancelButton.Name = "cancelButton";
+            cancelButton.Size = new Size(215, 37);
+            cancelButton.TabIndex = 6;
+            cancelButton.Text = "Cancel";
+            cancelButton.UseVisualStyleBackColor = false;
+            cancelButton.Click += cancelButton_Click;
             // 
             // AddProductForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(32)))));
-            this.BackgroundImage = global::shopManager.Properties.Resources.Screenshot__54_;
-            this.ClientSize = new System.Drawing.Size(663, 831);
-            this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.addProdLapel);
-            this.Controls.Add(this.quantityLabel);
-            this.Controls.Add(this.categoryComboBox);
-            this.Controls.Add(this.costTextBox);
-            this.Controls.Add(this.categoryLabel);
-            this.Controls.Add(this.addButton);
-            this.Controls.Add(this.profitLabel);
-            this.Controls.Add(this.profitTextBox);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.costLabel);
-            this.Controls.Add(this.quantityNumericUpDown);
-            this.Controls.Add(this.nameLabel);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximumSize = new System.Drawing.Size(686, 960);
-            this.Name = "AddProductForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddProductForm";
-            ((System.ComponentModel.ISupportInitialize)(this.quantityNumericUpDown)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(19, 22, 32);
+            BackgroundImage = Properties.Resources.Screenshot__54_;
+            ClientSize = new Size(580, 623);
+            Controls.Add(cancelButton);
+            Controls.Add(addProdLapel);
+            Controls.Add(quantityLabel);
+            Controls.Add(categoryComboBox);
+            Controls.Add(costTextBox);
+            Controls.Add(categoryLabel);
+            Controls.Add(addButton);
+            Controls.Add(profitLabel);
+            Controls.Add(profitTextBox);
+            Controls.Add(nameTextBox);
+            Controls.Add(costLabel);
+            Controls.Add(quantityNumericUpDown);
+            Controls.Add(nameLabel);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
+            MaximumSize = new Size(600, 720);
+            Name = "AddProductForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "AddProductForm";
+            ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
