@@ -318,7 +318,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "HomepageForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "HomepageForm";
+            Text = "Homepage";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

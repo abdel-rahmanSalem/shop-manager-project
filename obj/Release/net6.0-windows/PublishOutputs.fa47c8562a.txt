@@ -1,0 +1,5 @@
+D:\Shop Manager\shopManager.exe
+D:\Shop Manager\shopManager.dll
+D:\Shop Manager\shopManager.deps.json
+D:\Shop Manager\shopManager.runtimeconfig.json
+D:\Shop Manager\shopManager.pdb

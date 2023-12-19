@@ -247,7 +247,7 @@
             MaximumSize = new Size(600, 720);
             Name = "AddProductForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "AddProductForm";
+            Text = "New Product";
             ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();

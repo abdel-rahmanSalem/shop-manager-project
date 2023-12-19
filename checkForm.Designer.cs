@@ -102,7 +102,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "CheckForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "checkForm";
+            Text = "Checkout";
             WindowState = FormWindowState.Maximized;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

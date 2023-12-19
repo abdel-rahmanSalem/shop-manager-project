@@ -143,7 +143,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "StockForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "OrderForm";
+            Text = "Shoping Cart";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

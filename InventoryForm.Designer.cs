@@ -290,7 +290,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "InventoryForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Shop Manager";
+            Text = "Stock";
             WindowState = FormWindowState.Maximized;
             Load += InventoryForm_Load;
             ((System.ComponentModel.ISupportInitialize)searchIcon).EndInit();

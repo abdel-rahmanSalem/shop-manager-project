@@ -135,7 +135,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "LoginForm";
+            Text = "Login";
             WindowState = FormWindowState.Maximized;
             loginPanel.ResumeLayout(false);
             loginPanel.PerformLayout();

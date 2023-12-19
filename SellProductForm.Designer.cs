@@ -180,7 +180,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "SellProductForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "SellProductForm";
+            Text = "Sell Product";
             ((System.ComponentModel.ISupportInitialize)quantityNumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
